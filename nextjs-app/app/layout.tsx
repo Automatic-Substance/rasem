@@ -2,7 +2,8 @@ import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, EB_Garamond } from "next/font/google";
 import { draftMode } from "next/headers";
 import { VisualEditing, toPlainText } from "next-sanity";
 import { Toaster } from "sonner";
@@ -57,6 +58,18 @@ const inter = Inter({
   display: "swap",
 });
 
+const ebgaramond = EB_Garamond({
+  variable: "--font-ebgaramond",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const gotham = localFont({
+  src: "./fonts/Gotham-Book.otf",
+  variable: "--font-gotham",
+  weight: "400",
+});
+
 export default async function RootLayout({
   children,
 }: {
@@ -65,9 +78,12 @@ export default async function RootLayout({
   const { isEnabled: isDraftMode } = await draftMode();
 
   return (
-    <html lang="en" className={`${inter.variable} bg-white text-black`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${ebgaramond.variable} ${gotham.variable} bg-white text-black`}
+    >
       <body>
-        <section className="min-h-screen pt-24">
+        <section className="min-h-screen">
           {/* The <Toaster> component is responsible for rendering toast notifications used in /app/client-utils.ts and /app/components/DraftModeToast.tsx */}
           <Toaster />
           {isDraftMode && (

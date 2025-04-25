@@ -1,23 +1,41 @@
+"use client";
+
+import RasemLogo from "@/app/assets/icons/rasem-logo.svg";
+import ContactForm from "@/app/components/ContactForm";
+
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-gray-50 border-gray-100 border-t">
-      <div className="container">
-        <div className="flex flex-col items-center py-28 lg:flex-row">
-          <h3 className="mb-10 text-center text-4xl font-bold leading-tight tracking-tighter lg:mb-0 lg:w-1/2 lg:pr-4 lg:text-left lg:text-5xl">
-            Built with Sanity + Next.js.
-          </h3>
-          <div className="flex flex-col gap-3 items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
-            <a
-              href="https://github.com/sanity-io/sanity-template-nextjs-clean"
-              className="rounded-full flex gap-2 items-center bg-black hover:bg-red-500 focus:bg-cyan-500 py-3 px-6 text-white transition-colors duration-200"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
-            <a href="https://nextjs.org/docs" className="mx-3 hover:underline">
-              Read Next.js Documentation
-            </a>
+    <footer className="relative text-white bg-primary overflow-hidden">
+      <div className="grid grid-cols-9 gap-12 mx-12 my-20">
+        <div className="col-span-4 flex flex-col justify-between">
+          <div>
+            <RasemLogo className="w-[200px]" />
+          </div>
+          <div className="text-lg">
+            <p>Copyright © {year} Lorem Group Ltd.</p>
+            <p>All rights reserved.</p>
+          </div>
+        </div>
+        <div className="col-span-4">
+          <p className="text-lg mb-14">
+            The new global benchmark for wellness real estate—where cutting-edge
+            science, heritage, and bespoke luxury coexist. The brand’s mission
+            is to create environments where elite living converges with
+            transformative well-being solutions. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. In ut elementum erat. Nullam in
+            dignissim augue.
+          </p>
+          <div className="space-y-5">
+            <h2 className="text-3xl uppercase font-heading font-normal">
+              Contact Us
+            </h2>
+            <p className="text-lg">
+              Fusce vitae sem consequat, fermentum purus quis, vehicula libero.
+              Quisque vehicula ligula nec fringilla pellentesque. Quisque
+              condimentum at tellus at scelerisque.
+            </p>
+            <ContactForm />
           </div>
         </div>
       </div>
