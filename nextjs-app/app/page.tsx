@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Hero from "@/app/sections/Hero";
 import EndStatement from "@/app/sections/EndStatement";
+import Pillar from "@/app/components/Pillar";
 
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
@@ -67,6 +68,7 @@ export default async function Page() {
           </aside>
         </div>
       </div>
+      <Pillar />
       <EndStatement />
     </>
   );
