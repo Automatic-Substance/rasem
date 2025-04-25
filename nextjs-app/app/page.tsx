@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import Hero from "@/app/sections/Hero";
 
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
@@ -10,6 +11,7 @@ export default async function Page() {
       <div className="bg-gradient-to-r from-red-200 from-0% via-white via-40%  relative">
         <div className="bg-gradient-to-b from-white w-full h-40 absolute top-0"></div>
         <div className="bg-gradient-to-t from-white w-full h-40 absolute bottom-0"></div>
+        <Hero />
         <div className="container relative">
           <div className="mx-auto max-w-2xl py-20 lg:max-w-4xl lg:px-12 text-center">
             <div className="flex flex-col gap-4 items-center">
