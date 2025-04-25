@@ -60,6 +60,7 @@ const inter = Inter({
 
 const ebgaramond = EB_Garamond({
   variable: "--font-ebgaramond",
+  style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
