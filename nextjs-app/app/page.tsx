@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import Hero from "@/app/sections/Hero";
+import Visioniaries from "@/app/sections/Visionaries";
 import EndStatement from "@/app/sections/EndStatement";
 import Pillar from "@/app/components/Pillar";
+import Profile from "@/app/components/Profile";
 
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
@@ -68,6 +70,7 @@ export default async function Page() {
           </aside>
         </div>
       </div>
+      <Visioniaries />
       <Pillar />
       <EndStatement />
     </>
