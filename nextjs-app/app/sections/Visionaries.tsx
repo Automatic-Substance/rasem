@@ -24,7 +24,7 @@ export default function Visioniaries(props: VisioniariesProps) {
   });
   return (
     <div className="bg-background">
-      <div className="mx-12 grid grid-cols-9 gap-12 mt-20">
+      <div className="mx-12 grid grid-cols-9 gap-12 mt-24">
         <div className="col-span-4 aspect-[.744] relative">
           <Image
             sizes="100vw"
