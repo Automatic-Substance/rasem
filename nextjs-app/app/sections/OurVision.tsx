@@ -27,7 +27,7 @@ export default function OurVision(props: OurVisionProps) {
             </div>
           </div>
           <div className="col-span-5 flex items-center">
-            <p className="text-lg w-2/3">
+            <p className="text-lg w-4/5">
               The new global benchmark for wellness real estate where
               cutting-edge science, heritage, and bespoke luxury coexist. The
               brand’s mission is to create environments where elite living
