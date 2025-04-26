@@ -1,3 +1,4 @@
+import "keen-slider/keen-slider.min.css";
 import "./globals.css";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
