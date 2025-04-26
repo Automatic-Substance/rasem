@@ -5,6 +5,7 @@ import Visioniaries from "@/app/sections/Visionaries";
 import EndStatement from "@/app/sections/EndStatement";
 import Pillar from "@/app/components/Pillar";
 import OurVision from "@/app/sections/OurVision";
+import OurPhilosophy from "@/app/sections/OurPhilosophy";
 
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
@@ -70,6 +71,7 @@ export default async function Page() {
           </aside>
         </div>
       </div>
+      <OurPhilosophy />
       <OurVision />
       <Visioniaries />
       <Pillar />
