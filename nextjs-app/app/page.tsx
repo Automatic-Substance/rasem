@@ -3,7 +3,7 @@ import Link from "next/link";
 import Hero from "@/app/sections/Hero";
 import Visioniaries from "@/app/sections/Visionaries";
 import EndStatement from "@/app/sections/EndStatement";
-import Pillar from "@/app/components/Pillar";
+import Pillars from "@/app/sections/Pillars";
 import OurVision from "@/app/sections/OurVision";
 import OurPhilosophy from "@/app/sections/OurPhilosophy";
 import CollectiveVision from "@/app/sections/CollectiveVision";
@@ -41,7 +41,7 @@ export default async function Page() {
       </div>
       <OurVision />
       <Visioniaries />
-      <Pillar />
+      <Pillars />
       <EndStatement />
     </>
   );
