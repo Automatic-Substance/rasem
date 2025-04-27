@@ -124,7 +124,10 @@ export default function ContactForm() {
 
         <hr className="col-span-4 mt-24" />
 
-        <Button type="submit" className="mt-6 hover:bg-background/20">
+        <Button
+          type="submit"
+          className="mt-6 hover:bg-background/20 col-span-2"
+        >
           Submit
         </Button>
       </form>
