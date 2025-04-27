@@ -10,6 +10,8 @@ import CollectiveVision from "@/app/sections/CollectiveVision";
 
 import { AllPosts } from "@/app/components/Posts";
 import GetStartedCode from "@/app/components/GetStartedCode";
+import Image from "next/image";
+import DubaiImage from "@/app/assets/images/dubai.webp";
 
 export default async function Page() {
   return (
@@ -28,6 +30,15 @@ export default async function Page() {
         </div>
       </div>
       <OurPhilosophy />
+      <div className="w-full aspect-[1.84] relative">
+        <Image
+          sizes="100vw"
+          objectFit="cover"
+          fill
+          src={DubaiImage}
+          alt="Dubai Image"
+        />
+      </div>
       <OurVision />
       <Visioniaries />
       <Pillar />
