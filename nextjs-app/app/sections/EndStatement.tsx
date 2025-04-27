@@ -12,7 +12,7 @@ export default function EndStatement(props: EndStatementProps) {
             Commune with the future of{" "}
             <span className="italic">holistic wellness</span>.
           </h2>
-          <p className="uppercase font-heading">
+          <p className="uppercase font-heading tracking-widest">
             A vision materialising in 2026.
           </p>
         </div>
