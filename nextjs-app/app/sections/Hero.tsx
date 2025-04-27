@@ -21,6 +21,7 @@ export default function Hero(props: HeroProps) {
   return (
     <div className="relative min-h-svh">
       <Image
+        className="object-[10%_50%] lg:object-center"
         sizes="100vw"
         objectFit="cover"
         fill
