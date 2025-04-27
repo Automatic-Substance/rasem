@@ -1,11 +1,12 @@
 import Image from "next/image";
-import BigImage from "@/app/assets/images/end-statement.webp";
+import OurVisionImageOne from "@/app/assets/images/ourvision-1.webp";
+import OurVisionImageTwo from "@/app/assets/images/ourvision-2.webp";
 
 interface OurVisionProps {}
 
 export default function OurVision(props: OurVisionProps) {
   return (
-    <div className="relative my-24 mx-12" {...props}>
+    <div className="relative py-24 px-12 bg-white" {...props}>
       <div className="grid grid-cols-9 gap-12">
         <div className="col-span-5 grid grid-cols-subgrid gap-x-12 grid-rows-2">
           <div className="col-span-5 grid grid-cols-subgrid gap-12 auto-rows-max">
@@ -21,7 +22,7 @@ export default function OurVision(props: OurVisionProps) {
                 sizes="100vw"
                 objectFit="cover"
                 fill
-                src={BigImage}
+                src={OurVisionImageOne}
                 alt="Canyon Image"
               />
             </div>
@@ -46,7 +47,7 @@ export default function OurVision(props: OurVisionProps) {
                 sizes="100vw"
                 objectFit="cover"
                 fill
-                src={BigImage}
+                src={OurVisionImageTwo}
                 alt="Canyon Image"
               />
             </div>
