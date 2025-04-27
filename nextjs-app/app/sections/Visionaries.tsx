@@ -16,9 +16,14 @@ export default function Visioniaries(props: VisioniariesProps) {
   const [ActiveIndex, setActiveIndex] = useState<number>(0);
   const [sliderRef] = useKeenSlider({
     initial: 0,
+    breakpoints: {
+      "(min-width: 1024px)": {
+        slides: { perView: 3.2, spacing: 50 },
+      },
+    },
     slides: {
-      perView: 3.2,
-      spacing: 50,
+      perView: 1.5,
+      spacing: 20,
     },
     slideChanged: (slider) => {
       setActiveIndex(slider.track.details.rel);
@@ -26,7 +31,38 @@ export default function Visioniaries(props: VisioniariesProps) {
   });
   return (
     <div className="bg-background">
-      <div className="mx-12 grid grid-cols-9 gap-12 mt-24">
+      <div className="lg:hidden mx-10 mt-16">
+        <div className="flex flex-col gap-8 items-center">
+          <h2 className="text-3xl leading-[1.4]">
+            A <span className="italic">Collaboration</span>
+            <br />
+            Between
+            <br />A Team of <span className="italic">Visionaries</span>
+          </h2>
+          <div className="flex flex-col gap-4 relative">
+            <div className="size-[4px] bg-primary rounded-full"></div>
+            <div className="size-[4px] bg-primary rounded-full"></div>
+            <div className="size-[4px] bg-primary rounded-full"></div>
+            <div className="size-[4px] bg-primary rounded-full"></div>
+          </div>
+          <div className="w-full aspect-[.672] relative">
+            <Image
+              sizes="100vw"
+              objectFit="cover"
+              fill
+              src={CanyonImage}
+              alt="Canyon Image"
+            />
+          </div>
+          <p className="text-base relative mt-3">
+            The new global benchmark for wellness real estate where cutting-edge
+            science, heritage, and bespoke luxury coexist. The brand’s mission
+            is to create environments where elite living converges with
+            transformative well-being solutions.
+          </p>
+        </div>
+      </div>
+      <div className="hidden lg:grid mx-12 grid-cols-9 gap-12 mt-24">
         <div className="col-span-4 aspect-[.744] relative">
           <Image
             sizes="100vw"
@@ -59,7 +95,10 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
         </div>
       </div>
-      <div className="relative px-12 overflow-hidden mt-28 mb-32 cursor-grab [&]:active:cursor-grabbing">
+      <div className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-8 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
+        <h2 className="lg:hidden uppercase text-[10px] font-heading text-center mb-8 tracking-widest">
+          Partners
+        </h2>
         <div
           ref={sliderRef}
           className="keen-slider"
@@ -119,7 +158,7 @@ export default function Visioniaries(props: VisioniariesProps) {
             />
           </div>
         </div>
-        <div className="relative h-[2px] w-full max-w-4xl bg-[#D9D9D9] m-auto mt-10">
+        <div className="relative h-[2px] w-4/6 lg:w-full max-w-4xl bg-[#D9D9D9] m-auto mt-16 lg:mt-10">
           <div
             className="bg-primary absolute left-0 top-0 h-full transition-all duration-200 ease-in-out"
             style={{ width: `${((ActiveIndex + 1) / 5) * 100}%` }}

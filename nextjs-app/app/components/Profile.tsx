@@ -15,7 +15,7 @@ export default function Profile({
   title,
   description,
 }: ProfileProps) {
-  const imageClasses = cn("relative w-full mb-11", {
+  const imageClasses = cn("relative w-full mb-8 lg:mb-11", {
     "aspect-[.726]": mode === 1,
     "aspect-[.817]": mode === 2,
   });
@@ -30,11 +30,13 @@ export default function Profile({
           alt="Profile Image"
         />
       </div>
-      <div className="size-2 bg-primary rounded-full mb-5"></div>
-      <h3 className="text-4xl font-heading uppercase tracking-widest mb-2">
+      <div className="size-1 lg:size-2 bg-primary rounded-full mb-5"></div>
+      <h3 className="text-xl lg:text-4xl font-heading uppercase tracking-widest mb-2">
         {name}
       </h3>
-      <div className="font-heading uppercase tracking-widest mb-6">{title}</div>
+      <div className="font-heading uppercase tracking-widest mb-6 text-[10px] lg:text-base">
+        {title}
+      </div>
       <p>{description}</p>
     </div>
   );
