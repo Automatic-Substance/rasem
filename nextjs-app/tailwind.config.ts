@@ -98,7 +98,7 @@ export default {
           "900": "#183122",
           "950": "#14211a",
         },
-        background: "hsl(var(--background))",
+        background: "hsl(var(--background),<alpha-value>)",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",

@@ -2,6 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
+import cn from "classnames";
 import {
   Form,
   FormControl,
@@ -44,11 +45,17 @@ export default function ContactForm() {
     console.log(values);
   }
 
+  const inputClasses = cn(
+    "font-heading placeholder:text-white placeholder:font-heading placeholder:uppercase placeholder:text-sm placeholder:tracking-widest bg-transparent focus-visible:outline-none resize-none"
+  );
+
+  const textareaClasses = cn(inputClasses, "h-[42px]");
+
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid grid-cols-4 gap-12"
+        className="grid grid-cols-4 gap-x-12 gap-y-7"
       >
         <FormField
           control={form.control}
@@ -56,7 +63,11 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem className="col-span-2">
               <FormControl>
-                <Input placeholder="Full name" {...field} />
+                <Input
+                  placeholder="Full name"
+                  className={inputClasses}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -68,7 +79,11 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem className="col-span-2">
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <Input
+                  placeholder="Email"
+                  className={inputClasses}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +95,11 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem className="col-span-4">
               <FormControl>
-                <Input placeholder="Subject Line" {...field} />
+                <Input
+                  placeholder="Subject Line"
+                  className={inputClasses}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,7 +113,7 @@ export default function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder="Message"
-                  className="resize-none"
+                  className={textareaClasses}
                   {...field}
                 />
               </FormControl>
@@ -103,7 +122,14 @@ export default function ContactForm() {
           )}
         />
 
-        <Button type="submit">Submit</Button>
+        <hr className="col-span-4 mt-24" />
+
+        <Button
+          type="submit"
+          className="mt-6 hover:bg-background/20 col-span-2"
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   );
