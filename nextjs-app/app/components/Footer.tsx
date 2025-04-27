@@ -6,7 +6,7 @@ import ContactForm from "@/app/components/ContactForm";
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative text-white bg-primary overflow-hidden">
+    <footer className="relative text-white bg-primary-background overflow-hidden">
       <div className="grid grid-cols-9 gap-12 mx-12 my-20">
         <div className="col-span-4 flex flex-col justify-between">
           <div>
