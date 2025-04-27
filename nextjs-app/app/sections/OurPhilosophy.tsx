@@ -1,11 +1,13 @@
 import Image from "next/image";
-import BigImage from "@/app/assets/images/end-statement.webp";
+import ImageOne from "@/app/assets/images/ourphilosophy-1.png";
+import ImageTwo from "@/app/assets/images/ourphilosophy-2.png";
+import ImageThree from "@/app/assets/images/ourphilosophy-3.webp";
 
 interface OurPhilosophyProps {}
 
 export default function OurPhilosophy(props: OurPhilosophyProps) {
   return (
-    <div className="relative my-24 mx-12" {...props}>
+    <div className="relative pt-36 pb-24 px-12 bg-white" {...props}>
       <div className="grid grid-cols-9 gap-12">
         <div className="col-span-5 grid grid-cols-subgrid gap-x-12 gap-y-16">
           <div className="col-span-5 flex justify-between">
@@ -24,8 +26,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                   sizes="100vw"
                   objectFit="cover"
                   fill
-                  src={BigImage}
-                  alt="Canyon Image"
+                  src={ImageOne}
+                  alt="A tree at sunset"
                 />
               </div>
             </div>
@@ -38,8 +40,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                 sizes="100vw"
                 objectFit="cover"
                 fill
-                src={BigImage}
-                alt="Canyon Image"
+                src={ImageTwo}
+                alt="Two hands"
               />
             </div>
             <div className="flex-1 aspect-[.67] relative">
@@ -47,8 +49,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                 sizes="100vw"
                 objectFit="cover"
                 fill
-                src={BigImage}
-                alt="Canyon Image"
+                src={ImageThree}
+                alt="Girl on patio chair overlooking the ocean"
               />
             </div>
           </div>
