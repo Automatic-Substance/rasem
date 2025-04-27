@@ -44,7 +44,9 @@ export default function Pillar({
         </div>
       </div>
       <div className="absolute left-0 bottom-0 h-1/2 w-1/3 pl-24 space-y-10">
-        <h2 className="uppercase font-heading text-4xl">{title}</h2>
+        <h2 className="uppercase font-heading text-4xl tracking-wide">
+          {title}
+        </h2>
         <p className="text-xl">{description}</p>
       </div>
     </div>

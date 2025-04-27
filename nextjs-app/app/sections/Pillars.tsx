@@ -90,40 +90,46 @@ export default function Pillars(props: PillarsProps) {
     },
   });
   return (
-    <div className="relative w-full select-none">
-      <div ref={sliderRef} className="relative overflow-hidden grid" {...props}>
-        {slides.map((slide, idx) => (
-          <div
-            key={idx}
-            className="[grid-area:1/1]"
-            style={{ opacity: opacities[idx] }}
-          >
-            <Pillar
-              title={slide.title}
-              description={slide.description}
-              icon={slide.icon}
-              imageOne={slide.imageOne}
-              imageTwo={slide.imageTwo}
-            />
-          </div>
-        ))}
-      </div>
-      {loaded && instanceRef.current && (
-        <div className="absolute left-24 bottom-12 flex gap-12">
-          <div
-            className="rotate-180 transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
-            onClick={() => instanceRef.current?.prev()}
-          >
-            <ChevronIcon />
-          </div>
-          <div
-            className="transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
-            onClick={() => instanceRef.current?.next()}
-          >
-            <ChevronIcon />
-          </div>
+    <div className="relative w-full select-none bg-white py-24">
+      <div className="relative w-ful">
+        <div
+          ref={sliderRef}
+          className="relative overflow-hidden grid"
+          {...props}
+        >
+          {slides.map((slide, idx) => (
+            <div
+              key={idx}
+              className="[grid-area:1/1]"
+              style={{ opacity: opacities[idx] }}
+            >
+              <Pillar
+                title={slide.title}
+                description={slide.description}
+                icon={slide.icon}
+                imageOne={slide.imageOne}
+                imageTwo={slide.imageTwo}
+              />
+            </div>
+          ))}
         </div>
-      )}
+        {loaded && instanceRef.current && (
+          <div className="absolute left-24 bottom-0 flex gap-12">
+            <div
+              className="rotate-180 transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
+              onClick={() => instanceRef.current?.prev()}
+            >
+              <ChevronIcon />
+            </div>
+            <div
+              className="transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
+              onClick={() => instanceRef.current?.next()}
+            >
+              <ChevronIcon />
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

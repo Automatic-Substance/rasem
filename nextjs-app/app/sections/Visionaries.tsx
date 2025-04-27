@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import JuliaImage from "@/app/assets/images/profile-Julia.jpg";
 import FrederikImage from "@/app/assets/images/profile-Frederik.jpg";
+import JonasImage from "@/app/assets/images/profile-Jonas-Bjerre-Poulsen-kopier-1-scaled.jpg";
+import SandieImage from "@/app/assets/images/profile-Sandie-web-1280x1760.jpg";
 import Profile from "@/app/components/Profile";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
@@ -57,7 +59,7 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
         </div>
       </div>
-      <div className="relative px-12 overflow-hidden mt-20 mb-32 cursor-grab [&]:active:cursor-grabbing">
+      <div className="relative px-12 overflow-hidden mt-28 mb-32 cursor-grab [&]:active:cursor-grabbing">
         <div
           ref={sliderRef}
           className="keen-slider"
@@ -74,7 +76,7 @@ export default function Visioniaries(props: VisioniariesProps) {
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={FrederikImage}
+              image={JonasImage}
             />
           </div>
           <div className="keen-slider__slide">
@@ -100,7 +102,7 @@ export default function Visioniaries(props: VisioniariesProps) {
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={JuliaImage}
+              image={SandieImage}
             />
           </div>
           <div className="keen-slider__slide">
@@ -113,7 +115,7 @@ export default function Visioniaries(props: VisioniariesProps) {
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={JuliaImage}
+              image={FrederikImage}
             />
           </div>
         </div>

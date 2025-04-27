@@ -28,7 +28,10 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-12 absolute w-full h-screen bottom-0 left-0 items-center justify-center">
+      <div
+        id="collective-vision"
+        className="flex flex-col gap-12 absolute w-full h-screen bottom-0 left-0 items-center justify-center"
+      >
         <div className="text-6xl text-center">
           A<br />
           Collective
