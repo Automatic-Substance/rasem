@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import OurVisionImageOne from "@/app/assets/images/ourvision-1.webp";
 import OurVisionImageTwo from "@/app/assets/images/ourvision-2.webp";
+import { motion } from "framer-motion";
+import { StaggerIn, animation } from "@/app/components/Animation";
 
 interface OurVisionProps {}
 
@@ -47,18 +51,29 @@ export default function OurVision(props: OurVisionProps) {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block relative py-24 px-12 bg-white" {...props}>
+      <StaggerIn
+        className="hidden lg:block relative py-24 px-12 bg-white"
+        {...props}
+      >
         <div className="grid grid-cols-9 gap-12">
           <div className="col-span-5 grid grid-cols-subgrid gap-x-12 grid-rows-2">
             <div className="col-span-5 grid grid-cols-subgrid gap-12 auto-rows-max">
               <div className="col-span-3 flex flex-col justify-between">
-                <h2 className="tracking-widest font-heading">OUR VISION</h2>
-                <p className="text-5xl w-5/6">
+                <motion.h2
+                  variants={animation}
+                  className="tracking-widest font-heading"
+                >
+                  OUR VISION
+                </motion.h2>
+                <motion.p variants={animation} className="text-5xl w-5/6">
                   The new benchmark in{" "}
                   <span className="italic">wellness real-estate.</span>
-                </p>
+                </motion.p>
               </div>
-              <div className="col-span-2 aspect-[.75] relative">
+              <motion.div
+                variants={animation}
+                className="col-span-2 aspect-[.75] relative"
+              >
                 <Image
                   sizes="100vw"
                   objectFit="cover"
@@ -66,10 +81,10 @@ export default function OurVision(props: OurVisionProps) {
                   src={OurVisionImageOne}
                   alt="Canyon Image"
                 />
-              </div>
+              </motion.div>
             </div>
             <div className="col-span-5 flex items-center">
-              <p className="text-lg w-4/5">
+              <motion.p variants={animation} className="text-lg w-4/5">
                 The new global benchmark for wellness real estate where
                 cutting-edge science, heritage, and bespoke luxury coexist. The
                 brand’s mission is to create environments where elite living
@@ -78,12 +93,15 @@ export default function OurVision(props: OurVisionProps) {
                 fringilla, quis egestas odio auctor. Proin sit amet condimentum
                 ipsum, eu sodales metus. Quisque eu dolor posuere, eleifend
                 ligula eget, hendrerit erat.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="col-start-6 col-span-4">
             <div className="w-full aspect-[.77] relative">
-              <div className="relative h-full w-[calc(100%+48px)]">
+              <motion.div
+                variants={animation}
+                className="relative h-full w-[calc(100%+48px)]"
+              >
                 <Image
                   sizes="100vw"
                   objectFit="cover"
@@ -91,11 +109,11 @@ export default function OurVision(props: OurVisionProps) {
                   src={OurVisionImageTwo}
                   alt="Canyon Image"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
-      </div>
+      </StaggerIn>
     </>
   );
 }

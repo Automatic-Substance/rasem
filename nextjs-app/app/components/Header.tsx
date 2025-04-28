@@ -1,10 +1,51 @@
+"use client";
+
 import RasemLogo from "@/app/assets/icons/rasem-logo.svg";
+import { useState } from "react";
+import { useScroll, useMotionValueEvent, motion } from "framer-motion";
+
 export default function Header() {
+  const [smallLogo, setSmallLogo] = useState(false);
+  const { scrollYProgress, scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 40 && !smallLogo) {
+      setSmallLogo(true);
+    } else if (latest <= 40 && smallLogo) {
+      setSmallLogo(false);
+    }
+  });
+
+  const logoAnimation = {
+    large: {
+      width: "280px",
+      translateY: 80,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.2,
+      },
+    },
+    small: {
+      width: "120px",
+      translateY: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 0.2,
+      },
+    },
+  };
+
   return (
     <header className="fixed z-50 w-full flex">
       <div className="container py-6 sm:px-5 flex justify-center">
         <nav>
-          <RasemLogo className="w-[280px] translate-y-16" />
+          <motion.div
+            variants={logoAnimation}
+            animate={smallLogo ? "small" : "large"}
+            initial="large"
+          >
+            <RasemLogo className="w-full" />
+          </motion.div>
         </nav>
       </div>
     </header>

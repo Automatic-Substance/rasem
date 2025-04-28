@@ -9,6 +9,8 @@ import Profile from "@/app/components/Profile";
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import CanyonImage from "@/app/assets/images/canyons.png";
+import { motion } from "framer-motion";
+import { StaggerIn, animation } from "@/app/components/Animation";
 
 interface VisioniariesProps {}
 
@@ -62,8 +64,11 @@ export default function Visioniaries(props: VisioniariesProps) {
           </p>
         </div>
       </div>
-      <div className="hidden lg:grid mx-12 grid-cols-9 gap-12 mt-24">
-        <div className="col-span-4 aspect-[.744] relative">
+      <StaggerIn className="hidden lg:grid mx-12 grid-cols-9 gap-12 mt-24">
+        <motion.div
+          variants={animation}
+          className="col-span-4 aspect-[.744] relative"
+        >
           <Image
             sizes="100vw"
             objectFit="cover"
@@ -71,31 +76,37 @@ export default function Visioniaries(props: VisioniariesProps) {
             src={CanyonImage}
             alt="Canyon Image"
           />
-        </div>
+        </motion.div>
         <div className="col-span-5 px-10 flex items-center">
           <div className="flex flex-col gap-14 items-start">
-            <h2 className="text-6xl leading-[1.5]">
+            <motion.h2 variants={animation} className="text-6xl leading-[1.5]">
               A <span className="italic">Collaboration</span>
               <br />
               Between
               <br />A Team of <span className="italic">Visionaries</span>
-            </h2>
-            <div className="flex flex-col gap-6 relative left-[40%]">
+            </motion.h2>
+            <motion.div
+              variants={animation}
+              className="flex flex-col gap-6 relative left-[40%]"
+            >
               <div className="size-[6px] bg-primary rounded-full"></div>
               <div className="size-[6px] bg-primary rounded-full"></div>
               <div className="size-[6px] bg-primary rounded-full"></div>
               <div className="size-[6px] bg-primary rounded-full"></div>
-            </div>
-            <p className="text-xl relative left-[40%] w-[60%]">
+            </motion.div>
+            <motion.p
+              variants={animation}
+              className="text-xl relative left-[40%] w-[60%]"
+            >
               The new global benchmark for wellness real estate where
               cutting-edge science, heritage, and bespoke luxury coexist. The
               brand’s mission is to create environments where elite living
               converges with transformative well-being solutions.
-            </p>
+            </motion.p>
           </div>
         </div>
-      </div>
-      <div className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-8 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
+      </StaggerIn>
+      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-8 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
         <h2 className="lg:hidden uppercase text-[10px] font-heading text-center mb-8 tracking-widest">
           Partners
         </h2>
@@ -106,56 +117,64 @@ export default function Visioniaries(props: VisioniariesProps) {
           {...props}
         >
           <div className="keen-slider__slide">
-            <Profile
-              mode={1}
-              name="SAFI QUrashi"
-              title="LOREM IPSUM"
-              description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
+            <motion.div variants={animation}>
+              <Profile
+                mode={1}
+                name="SAFI QUrashi"
+                title="LOREM IPSUM"
+                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
         integrating advanced technology, healthcare innovation, and holistic
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={JonasImage}
-            />
+                image={JonasImage}
+              />
+            </motion.div>
           </div>
           <div className="keen-slider__slide">
-            <Profile
-              mode={2}
-              name="REGINE LABROSSE"
-              title="LOREM IPSUM"
-              description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
+            <motion.div variants={animation}>
+              <Profile
+                mode={2}
+                name="REGINE LABROSSE"
+                title="LOREM IPSUM"
+                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
         integrating advanced technology, healthcare innovation, and holistic
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={JuliaImage}
-            />
+                image={JuliaImage}
+              />
+            </motion.div>
           </div>
           <div className="keen-slider__slide">
-            <Profile
-              mode={1}
-              name="REGINE LABROSSE"
-              title="LOREM IPSUM"
-              description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
+            <motion.div variants={animation}>
+              <Profile
+                mode={1}
+                name="REGINE LABROSSE"
+                title="LOREM IPSUM"
+                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
         integrating advanced technology, healthcare innovation, and holistic
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={SandieImage}
-            />
+                image={SandieImage}
+              />
+            </motion.div>
           </div>
           <div className="keen-slider__slide">
-            <Profile
-              mode={2}
-              name="REGINE LABROSSE"
-              title="LOREM IPSUM"
-              description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
+            <motion.div variants={animation}>
+              <Profile
+                mode={2}
+                name="REGINE LABROSSE"
+                title="LOREM IPSUM"
+                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
         integrating advanced technology, healthcare innovation, and holistic
         wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
         ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
         fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-              image={FrederikImage}
-            />
+                image={FrederikImage}
+              />
+            </motion.div>
           </div>
         </div>
         <div className="relative h-[2px] w-4/6 lg:w-full max-w-4xl bg-[#D9D9D9] m-auto mt-16 lg:mt-10">
@@ -164,7 +183,7 @@ export default function Visioniaries(props: VisioniariesProps) {
             style={{ width: `${((ActiveIndex + 1) / 5) * 100}%` }}
           ></div>
         </div>
-      </div>
+      </StaggerIn>
     </div>
   );
 }
