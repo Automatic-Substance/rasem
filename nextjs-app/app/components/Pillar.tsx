@@ -16,11 +16,10 @@ export default function Pillar({
   ...props
 }: PillarProps) {
   return (
-    <div className="relative w-full flex" {...props}>
-      <div className="w-1/2 pl-24 pr-12 flex items-start">
-        <div className="flex justify-between items-end w-full">
-          {icon}
-          <div className="relative aspect-[.82] w-2/4">
+    <>
+      <div className="lg:hidden relative w-full space-y-6" {...props}>
+        <div className="flex gap-5 items-start">
+          <div className="relative aspect-[.82] w-2/5">
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -29,26 +28,61 @@ export default function Pillar({
               alt="Hero Image"
             />
           </div>
+          <div className="relative aspect-[.814] flex-1">
+            {" "}
+            <Image
+              sizes="100vw"
+              objectFit="cover"
+              fill
+              src={imageTwo}
+              alt="Hero Image"
+            />
+          </div>
+        </div>
+        <div className="space-y-14 mx-10">
+          <div>{icon}</div>
+          <div className="space-y-4">
+            <h2 className="uppercase font-heading text-xl tracking-wide">
+              {title}
+            </h2>
+            <p className="text-base">{description}</p>
+          </div>
         </div>
       </div>
-      <div className="w-1/2">
-        <div className="relative aspect-[.814] w-full">
-          {" "}
-          <Image
-            sizes="100vw"
-            objectFit="cover"
-            fill
-            src={imageTwo}
-            alt="Hero Image"
-          />
+      <div className="relative w-full hidden lg:flex" {...props}>
+        <div className="w-1/2 pl-24 pr-12 flex items-start">
+          <div className="flex justify-between items-end w-full">
+            {icon}
+            <div className="relative aspect-[.82] w-2/4">
+              <Image
+                sizes="100vw"
+                objectFit="cover"
+                fill
+                src={imageOne}
+                alt="Hero Image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="w-1/2">
+          <div className="relative aspect-[.814] w-full">
+            {" "}
+            <Image
+              sizes="100vw"
+              objectFit="cover"
+              fill
+              src={imageTwo}
+              alt="Hero Image"
+            />
+          </div>
+        </div>
+        <div className="absolute left-0 bottom-0 h-1/2 w-1/3 pl-24 space-y-10">
+          <h2 className="uppercase font-heading text-4xl tracking-wide">
+            {title}
+          </h2>
+          <p className="text-xl">{description}</p>
         </div>
       </div>
-      <div className="absolute left-0 bottom-0 h-1/2 w-1/3 pl-24 space-y-10">
-        <h2 className="uppercase font-heading text-4xl tracking-wide">
-          {title}
-        </h2>
-        <p className="text-xl">{description}</p>
-      </div>
-    </div>
+    </>
   );
 }
