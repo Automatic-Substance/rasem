@@ -21,8 +21,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             Our Philosophy
           </motion.h2>
           <motion.p variants={animation} className="text-2xl w-full text-right">
-            A preface to <span className="italic">Lifeophilic:</span> the spirit
-            of all our creations.
+            A preface to <span className="italic">Lifeophilic:</span> Reshape
+            life by reclaiming time.
           </motion.p>
         </div>
         <div className="w-full aspect-[1.29] relative">
@@ -41,12 +41,12 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
         </div>
         <div className="items-center px-10 my-12">
           <motion.p variants={animation}>
-            The new global benchmark for wellness real estate where cutting-edge
-            science, heritage, and bespoke luxury coexist. The brand’s mission
-            is to create environments where elite living converges with
-            transformative well-being solutions. Lorem ipsum dolor sit amet,
-            consectetur. Donec feugiat mi in ex fringilla, quis egestas odio
-            auctor.{" "}
+            To live lifeophilic is to embrace that a life well lived is not
+            defined by longevity alone but by a commitment to fullness, purpose,
+            and impact. For those who seek not more time, but more from time,
+            this pursuit becomes mastery: where vitality shapes the canvas, and
+            life becomes the masterpiece. Here, time is not simply spent—it is
+            reclaimed, reshaped, and commanded.
           </motion.p>
         </div>
         <div className="flex gap-10 px-5">
@@ -93,8 +93,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                 variants={animation}
                 className="text-5xl w-4/6 text-right"
               >
-                A preface to <span className="italic">Lifeophilic:</span> the
-                spirit of all our creations.
+                A preface to <span className="italic">Lifeophilic:</span>{" "}
+                Reshape life by reclaiming time.
               </motion.p>
             </div>
             <div className="col-span-5">
@@ -143,12 +143,12 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             </div>
             <div className="col-span-4 flex items-center px-12">
               <motion.p variants={animation}>
-                The new global benchmark for wellness real estate where
-                cutting-edge science, heritage, and bespoke luxury coexist. The
-                brand’s mission is to create environments where elite living
-                converges with transformative well-being solutions. Lorem ipsum
-                dolor sit amet, consectetur. Donec feugiat mi in ex fringilla,
-                quis egestas odio auctor.{" "}
+                To live lifeophilic is to embrace that a life well lived is not
+                defined by longevity alone but by a commitment to fullness,
+                purpose, and impact. For those who seek not more time, but more
+                from time, this pursuit becomes mastery: where vitality shapes
+                the canvas, and life becomes the masterpiece. Here, time is not
+                simply spent—it is reclaimed, reshaped, and commanded.
               </motion.p>
             </div>
           </div>

@@ -84,11 +84,11 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           </FadeIn>
           <FadeIn className="flex flex-col items-center gap-14" delay={0.2}>
             <div className="text-3xl lg:text-6xl text-center">
-              A Shared
+              <span className="italic">Life measured</span>
               <br />
-              <span className="italic">Love for</span>
+              not in time,
               <br />
-              <span className="italic">Life</span>
+              <span className="italic">but in meaning</span>
             </div>
             <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
           </FadeIn>
