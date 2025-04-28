@@ -11,9 +11,15 @@ interface OurVisionProps {}
 export default function OurVision(props: OurVisionProps) {
   return (
     <>
-      <div className="lg:hidden relative pt-24 pb-20 px-5 bg-white" {...props}>
+      <StaggerIn
+        className="lg:hidden relative pt-24 pb-20 px-5 bg-white"
+        {...props}
+      >
         <div className="relative px-5 flex flex-col gap-14 text-center items-center">
-          <div className="w-full aspect-[.82] relative">
+          <motion.div
+            variants={animation}
+            className="w-full aspect-[.82] relative"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -21,17 +27,20 @@ export default function OurVision(props: OurVisionProps) {
               src={OurVisionImageTwo}
               alt="Bedroom overlooking dubai Image"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col gap-5 justify-center items-center">
-            <h2 className="tracking-widest font-heading text-[10px]">
+            <motion.h2
+              variants={animation}
+              className="tracking-widest font-heading text-[10px]"
+            >
               OUR VISION
-            </h2>
-            <p className="text-2xl w-5/6">
+            </motion.h2>
+            <motion.p variants={animation} className="text-2xl w-5/6">
               The new benchmark in{" "}
               <span className="italic">wellness real-estate.</span>
-            </p>
+            </motion.p>
           </div>
-          <p className="text-base w-full">
+          <motion.p variants={animation} className="text-base w-full">
             The new global benchmark for wellness real estate where cutting-edge
             science, heritage, and bespoke luxury coexist. The brand’s mission
             is to create environments where elite living converges with
@@ -39,8 +48,11 @@ export default function OurVision(props: OurVisionProps) {
             and consectetur. Donec feugiat mi in ex fringilla, quis egestas odio
             auctor. Proin sit amet condimentum ipsum, eu sodales metus. Quisque
             eu dolor posuere, eleifend ligula eget, hendrerit erat.
-          </p>
-          <div className="aspect-[.68] relative w-4/6">
+          </motion.p>
+          <motion.div
+            variants={animation}
+            className="aspect-[.68] relative w-4/6"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -48,9 +60,9 @@ export default function OurVision(props: OurVisionProps) {
               src={OurVisionImageOne}
               alt="Canyon Image"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </StaggerIn>
       <StaggerIn
         className="hidden lg:block relative py-24 px-12 bg-white"
         {...props}

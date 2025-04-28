@@ -12,18 +12,24 @@ interface OurPhilosophyProps {}
 export default function OurPhilosophy(props: OurPhilosophyProps) {
   return (
     <>
-      <div className="lg:hidden relative pt-24 pb-20 px-5 bg-white">
+      <StaggerIn className="lg:hidden relative pt-24 pb-20 px-5 bg-white">
         <div className="flex flex-col px-10 gap-8 mb-8">
-          <h2 className="tracking-widest font-heading uppercase text-[10px]">
+          <motion.h2
+            variants={animation}
+            className="tracking-widest font-heading uppercase text-[10px]"
+          >
             Our Philosophy
-          </h2>
-          <p className="text-2xl w-full text-right">
+          </motion.h2>
+          <motion.p variants={animation} className="text-2xl w-full text-right">
             A preface to <span className="italic">Lifeophilic:</span> the spirit
             of all our creations.
-          </p>
+          </motion.p>
         </div>
         <div className="w-full aspect-[1.29] relative">
-          <div className="relative h-full w-[calc(100%-20px)] -left-[20px]">
+          <motion.div
+            variants={animation}
+            className="relative h-full w-[calc(100%-20px)] -left-[20px]"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -31,20 +37,23 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
               src={ImageOne}
               alt="A tree at sunset"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="items-center px-10 my-12">
-          <p>
+          <motion.p variants={animation}>
             The new global benchmark for wellness real estate where cutting-edge
             science, heritage, and bespoke luxury coexist. The brand’s mission
             is to create environments where elite living converges with
             transformative well-being solutions. Lorem ipsum dolor sit amet,
             consectetur. Donec feugiat mi in ex fringilla, quis egestas odio
             auctor.{" "}
-          </p>
+          </motion.p>
         </div>
         <div className="flex gap-10 px-5">
-          <div className="flex-1 aspect-[.67] relative">
+          <motion.div
+            variants={animation}
+            className="flex-1 aspect-[.67] relative"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -52,8 +61,11 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
               src={ImageTwo}
               alt="Two hands"
             />
-          </div>
-          <div className="flex-1 aspect-[.67] relative">
+          </motion.div>
+          <motion.div
+            variants={animation}
+            className="flex-1 aspect-[.67] relative"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -61,9 +73,9 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
               src={ImageThree}
               alt="Girl on patio chair overlooking the ocean"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </StaggerIn>
       <div
         className="hidden lg:block relative pt-36 pb-24 px-12 bg-white"
         {...props}
