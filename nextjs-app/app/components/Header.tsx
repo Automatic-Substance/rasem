@@ -9,9 +9,9 @@ export default function Header() {
   const { scrollYProgress, scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 40 && !smallLogo) {
+    if (latest > 10 && !smallLogo) {
       setSmallLogo(true);
-    } else if (latest <= 40 && smallLogo) {
+    } else if (latest <= 10 && smallLogo) {
       setSmallLogo(false);
     }
   });
@@ -31,7 +31,7 @@ export default function Header() {
     },
     small: {
       width: "120px",
-      translateY: 0,
+      translateY: 80,
       transition: {
         ease: "easeInOut",
         duration: 0.2,
@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-20 w-full flex">
+    <header className="absolute top-0 left-0 z-20 w-full flex">
       <div className="container py-6 sm:px-5 flex justify-center">
         <nav>
           <motion.div
