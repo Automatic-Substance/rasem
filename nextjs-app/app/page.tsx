@@ -28,7 +28,7 @@ export default async function Page() {
         </div>
       </div> */}
       <OurPhilosophy />
-      <div className="w-full aspect-[1.84] relative">
+      <div className="w-full aspect-[1.43] lg:aspect-[1.84] relative">
         <Image
           sizes="100vw"
           objectFit="cover"

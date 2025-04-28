@@ -55,7 +55,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid grid-cols-4 gap-x-12 gap-y-7"
+        className="grid grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-7"
       >
         <FormField
           control={form.control}
@@ -126,7 +126,7 @@ export default function ContactForm() {
 
         <Button
           type="submit"
-          className="mt-6 hover:bg-background/20 col-span-2"
+          className="lg:mt-6 hover:bg-background/20 col-span-2 col-start-2 lg:col-start-1"
         >
           Submit
         </Button>

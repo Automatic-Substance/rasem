@@ -6,54 +6,96 @@ interface OurVisionProps {}
 
 export default function OurVision(props: OurVisionProps) {
   return (
-    <div className="relative py-24 px-12 bg-white" {...props}>
-      <div className="grid grid-cols-9 gap-12">
-        <div className="col-span-5 grid grid-cols-subgrid gap-x-12 grid-rows-2">
-          <div className="col-span-5 grid grid-cols-subgrid gap-12 auto-rows-max">
-            <div className="col-span-3 flex flex-col justify-between">
-              <h2 className="tracking-widest font-heading">OUR VISION</h2>
-              <p className="text-5xl w-5/6">
-                The new benchmark in{" "}
-                <span className="italic">wellness real-estate.</span>
-              </p>
-            </div>
-            <div className="col-span-2 aspect-[.75] relative">
-              <Image
-                sizes="100vw"
-                objectFit="cover"
-                fill
-                src={OurVisionImageOne}
-                alt="Canyon Image"
-              />
-            </div>
+    <>
+      <div className="lg:hidden relative pt-24 pb-20 px-5 bg-white" {...props}>
+        <div className="relative px-5 flex flex-col gap-14 text-center items-center">
+          <div className="w-full aspect-[.82] relative">
+            <Image
+              sizes="100vw"
+              objectFit="cover"
+              fill
+              src={OurVisionImageTwo}
+              alt="Bedroom overlooking dubai Image"
+            />
           </div>
-          <div className="col-span-5 flex items-center">
-            <p className="text-lg w-4/5">
-              The new global benchmark for wellness real estate where
-              cutting-edge science, heritage, and bespoke luxury coexist. The
-              brand’s mission is to create environments where elite living
-              converges with transformative well-being solutions. Lorem ipsum,
-              dolor, sit, amet, and consectetur. Donec feugiat mi in ex
-              fringilla, quis egestas odio auctor. Proin sit amet condimentum
-              ipsum, eu sodales metus. Quisque eu dolor posuere, eleifend ligula
-              eget, hendrerit erat.
+          <div className="flex flex-col gap-5 justify-center items-center">
+            <h2 className="tracking-widest font-heading text-[10px]">
+              OUR VISION
+            </h2>
+            <p className="text-2xl w-5/6">
+              The new benchmark in{" "}
+              <span className="italic">wellness real-estate.</span>
             </p>
           </div>
+          <p className="text-base w-full">
+            The new global benchmark for wellness real estate where cutting-edge
+            science, heritage, and bespoke luxury coexist. The brand’s mission
+            is to create environments where elite living converges with
+            transformative well-being solutions. Lorem ipsum, dolor, sit, amet,
+            and consectetur. Donec feugiat mi in ex fringilla, quis egestas odio
+            auctor. Proin sit amet condimentum ipsum, eu sodales metus. Quisque
+            eu dolor posuere, eleifend ligula eget, hendrerit erat.
+          </p>
+          <div className="aspect-[.68] relative w-4/6">
+            <Image
+              sizes="100vw"
+              objectFit="cover"
+              fill
+              src={OurVisionImageOne}
+              alt="Canyon Image"
+            />
+          </div>
         </div>
-        <div className="col-start-6 col-span-4">
-          <div className="w-full aspect-[.77] relative">
-            <div className="relative h-full w-[calc(100%+48px)]">
-              <Image
-                sizes="100vw"
-                objectFit="cover"
-                fill
-                src={OurVisionImageTwo}
-                alt="Canyon Image"
-              />
+      </div>
+      <div className="hidden lg:block relative py-24 px-12 bg-white" {...props}>
+        <div className="grid grid-cols-9 gap-12">
+          <div className="col-span-5 grid grid-cols-subgrid gap-x-12 grid-rows-2">
+            <div className="col-span-5 grid grid-cols-subgrid gap-12 auto-rows-max">
+              <div className="col-span-3 flex flex-col justify-between">
+                <h2 className="tracking-widest font-heading">OUR VISION</h2>
+                <p className="text-5xl w-5/6">
+                  The new benchmark in{" "}
+                  <span className="italic">wellness real-estate.</span>
+                </p>
+              </div>
+              <div className="col-span-2 aspect-[.75] relative">
+                <Image
+                  sizes="100vw"
+                  objectFit="cover"
+                  fill
+                  src={OurVisionImageOne}
+                  alt="Canyon Image"
+                />
+              </div>
+            </div>
+            <div className="col-span-5 flex items-center">
+              <p className="text-lg w-4/5">
+                The new global benchmark for wellness real estate where
+                cutting-edge science, heritage, and bespoke luxury coexist. The
+                brand’s mission is to create environments where elite living
+                converges with transformative well-being solutions. Lorem ipsum,
+                dolor, sit, amet, and consectetur. Donec feugiat mi in ex
+                fringilla, quis egestas odio auctor. Proin sit amet condimentum
+                ipsum, eu sodales metus. Quisque eu dolor posuere, eleifend
+                ligula eget, hendrerit erat.
+              </p>
+            </div>
+          </div>
+          <div className="col-start-6 col-span-4">
+            <div className="w-full aspect-[.77] relative">
+              <div className="relative h-full w-[calc(100%+48px)]">
+                <Image
+                  sizes="100vw"
+                  objectFit="cover"
+                  fill
+                  src={OurVisionImageTwo}
+                  alt="Canyon Image"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
