@@ -145,3 +145,5 @@ export const Parallax = forwardRef<HTMLDivElement, ParallaxProps>(
     );
   }
 );
+
+Parallax.displayName = "Parallax";
