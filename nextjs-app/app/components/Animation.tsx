@@ -1,8 +1,14 @@
 "use client";
 
 import cn from "classnames";
-import { useRef } from "react";
-import { motion, useScroll, useTransform, MotionProps } from "framer-motion";
+import { useRef, forwardRef } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  MotionProps,
+  useMotionValue,
+} from "framer-motion";
 interface FadeInProps extends MotionProps {
   children: React.ReactNode;
   delay?: number;
@@ -115,23 +121,27 @@ interface ParallaxProps extends MotionProps {
   children: React.ReactNode;
 }
 
-export function Parallax({ children, ...props }: ParallaxProps) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.8]);
-  return (
-    <div ref={ref} className="absolute size-full overflow-hidden">
-      <motion.div
-        style={{ y, opacity }}
-        className="absolute size-full"
-        {...props}
-      >
-        {children}
-      </motion.div>
-    </div>
-  );
-}
+export const Parallax = forwardRef<HTMLDivElement, ParallaxProps>(
+  ({ children, ...props }, ref) => {
+    const scale = useMotionValue(1.2);
+    const { scrollYProgress } = useScroll({
+      //@ts-ignore
+      target: ref,
+      offset: ["start end", "end start"],
+    });
+    const y = useTransform(scrollYProgress, [0, 1], [-100, 250]);
+    const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.8]);
+
+    return (
+      <div className="absolute size-full overflow-hidden">
+        <motion.div
+          style={{ y, opacity, scale }}
+          className="absolute size-full"
+          {...props}
+        >
+          {children}
+        </motion.div>
+      </div>
+    );
+  }
+);

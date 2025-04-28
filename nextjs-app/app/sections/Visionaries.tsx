@@ -33,21 +33,27 @@ export default function Visioniaries(props: VisioniariesProps) {
   });
   return (
     <div className="bg-background">
-      <div className="lg:hidden mx-10 mt-16">
+      <StaggerIn className="lg:hidden mx-10 mt-16">
         <div className="flex flex-col gap-8 items-center">
-          <h2 className="text-3xl leading-[1.4]">
+          <motion.h2 variants={animation} className="text-3xl leading-[1.4]">
             A <span className="italic">Collaboration</span>
             <br />
             Between
             <br />A Team of <span className="italic">Visionaries</span>
-          </h2>
-          <div className="flex flex-col gap-4 relative">
+          </motion.h2>
+          <motion.div
+            variants={animation}
+            className="flex flex-col gap-4 relative"
+          >
             <div className="size-[4px] bg-primary rounded-full"></div>
             <div className="size-[4px] bg-primary rounded-full"></div>
             <div className="size-[4px] bg-primary rounded-full"></div>
             <div className="size-[4px] bg-primary rounded-full"></div>
-          </div>
-          <div className="w-full aspect-[.672] relative">
+          </motion.div>
+          <motion.div
+            variants={animation}
+            className="w-full aspect-[.672] relative"
+          >
             <Image
               sizes="100vw"
               objectFit="cover"
@@ -55,15 +61,15 @@ export default function Visioniaries(props: VisioniariesProps) {
               src={CanyonImage}
               alt="Canyon Image"
             />
-          </div>
-          <p className="text-base relative mt-3">
+          </motion.div>
+          <motion.p variants={animation} className="text-base relative mt-3">
             The new global benchmark for wellness real estate where cutting-edge
             science, heritage, and bespoke luxury coexist. The brand’s mission
             is to create environments where elite living converges with
             transformative well-being solutions.
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </StaggerIn>
       <StaggerIn className="hidden lg:grid mx-12 grid-cols-9 gap-12 mt-24">
         <motion.div
           variants={animation}
