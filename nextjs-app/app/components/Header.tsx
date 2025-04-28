@@ -1,7 +1,7 @@
 "use client";
 
 import RasemLogo from "@/app/assets/icons/rasem-logo.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 
 export default function Header() {
@@ -15,6 +15,10 @@ export default function Header() {
       setSmallLogo(false);
     }
   });
+
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
 
   const logoAnimation = {
     large: {
