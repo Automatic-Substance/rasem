@@ -18,7 +18,7 @@ interface FadeInProps extends MotionProps {
 export const animation = {
   hidden: {
     opacity: 0,
-    y: 0,
+    y: 50,
     transition: {
       type: "spring",
       bounce: 0.3,
@@ -45,7 +45,7 @@ export function FadeIn({
   const animation = {
     hidden: {
       opacity: 0,
-      y: 0,
+      y: 50,
       transition: {
         type: "spring",
         bounce: 0.3,
