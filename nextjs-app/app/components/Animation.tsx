@@ -9,6 +9,27 @@ interface FadeInProps extends MotionProps {
   className?: string;
 }
 
+export const animation = {
+  hidden: {
+    opacity: 0,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.3,
+      duration: 0.8,
+    },
+  },
+};
+
 export function FadeIn({
   children,
   delay = 0,
@@ -33,8 +54,6 @@ export function FadeIn({
         delay: delay,
         bounce: 0.3,
         duration: 0.8,
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
       },
     },
   };
@@ -44,6 +63,46 @@ export function FadeIn({
       whileInView="visible"
       viewport={{ once: true }}
       variants={animation}
+      className={className}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function StaggerIn({
+  children,
+  delay = 0,
+  className,
+  ...props
+}: FadeInProps) {
+  const staggerAnimation = {
+    hidden: {
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 0.8,
+      },
+    },
+    visible: {
+      transition: {
+        type: "spring",
+        delay: delay,
+        bounce: 0.3,
+        duration: 0.8,
+        staggerChildren: 0.2,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={staggerAnimation}
       className={className}
       {...props}
     >
