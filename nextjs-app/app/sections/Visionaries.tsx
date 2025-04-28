@@ -38,7 +38,7 @@ export default function Visioniaries(props: VisioniariesProps) {
           <motion.h2 variants={animation} className="text-3xl leading-[1.4]">
             A <span className="italic">Collaboration</span>
             <br />
-            Between
+            between
             <br />A Team of <span className="italic">Visionaries</span>
           </motion.h2>
           <motion.div
@@ -62,12 +62,16 @@ export default function Visioniaries(props: VisioniariesProps) {
               alt="Canyon Image"
             />
           </motion.div>
-          <motion.p variants={animation} className="text-base relative mt-3">
-            The new global benchmark for wellness real estate where cutting-edge
-            science, heritage, and bespoke luxury coexist. The brand’s mission
-            is to create environments where elite living converges with
-            transformative well-being solutions.
-          </motion.p>
+          <div className="text-base relative mt-3 space-y-5">
+            <motion.p variants={animation}>
+              RASEM [rā·sem]: to sketch or illustrate with intention
+            </motion.p>
+            <motion.p variants={animation}>
+              Bound by a shared purpose to shape a new paradigm of living, the
+              visionaries behind RASEM etch innovation and intent across an
+              enriched canvas - where lifeophilic design finds its form.
+            </motion.p>
+          </div>
         </div>
       </StaggerIn>
       <StaggerIn className="hidden lg:grid mx-12 grid-cols-9 gap-12 mt-24">
@@ -88,7 +92,7 @@ export default function Visioniaries(props: VisioniariesProps) {
             <motion.h2 variants={animation} className="text-6xl leading-[1.5]">
               A <span className="italic">Collaboration</span>
               <br />
-              Between
+              between
               <br />A Team of <span className="italic">Visionaries</span>
             </motion.h2>
             <motion.div
@@ -100,15 +104,16 @@ export default function Visioniaries(props: VisioniariesProps) {
               <div className="size-[6px] bg-primary rounded-full"></div>
               <div className="size-[6px] bg-primary rounded-full"></div>
             </motion.div>
-            <motion.p
-              variants={animation}
-              className="text-xl relative left-[40%] w-[60%]"
-            >
-              The new global benchmark for wellness real estate where
-              cutting-edge science, heritage, and bespoke luxury coexist. The
-              brand’s mission is to create environments where elite living
-              converges with transformative well-being solutions.
-            </motion.p>
+            <div className="text-xl relative left-[40%] w-[60%] space-y-5">
+              <motion.p variants={animation}>
+                RASEM [rā·sem]: to sketch or illustrate with intention
+              </motion.p>
+              <motion.p variants={animation}>
+                Bound by a shared purpose to shape a new paradigm of living, the
+                visionaries behind RASEM etch innovation and intent across an
+                enriched canvas - where lifeophilic design finds its form.
+              </motion.p>
+            </div>
           </div>
         </div>
       </StaggerIn>

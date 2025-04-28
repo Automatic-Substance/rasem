@@ -21,21 +21,20 @@ export default function Footer() {
         </div>
         <div className="col-span-7 text-center lg:text-left lg:col-span-4">
           <motion.p variants={animation} className="text-lg mb-14">
-            The new global benchmark for wellness real estate—where cutting-edge
-            science, heritage, and bespoke luxury coexist. The brand’s mission
-            is to create environments where elite living converges with
-            transformative well-being solutions. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. In ut elementum erat. Nullam in
-            dignissim augue.
+            RASEM redefines living at the highest level. Merging real estate
+            investment, wellness, and innovation into one intentional ecosystem,
+            we are a canvas for a life well-lived. Founded on a philosophy
+            guided by the love of life itself, every element transforms how we
+            shape and spend precious time. Here, longevity becomes legacy. And
+            lifeophilic finds its form.
           </motion.p>
           <motion.div variants={animation} className="space-y-5">
             <h2 className="text-base lg:text-3xl uppercase font-heading font-normal">
               Contact Us
             </h2>
             <p className="text-lg">
-              Fusce vitae sem consequat, fermentum purus quis, vehicula libero.
-              Quisque vehicula ligula nec fringilla pellentesque. Quisque
-              condimentum at tellus at scelerisque.
+              Ready to connect? We invite you to register your interest or reach
+              out for a conversation by completing the contact form below.
             </p>
             <ContactForm />
           </motion.div>

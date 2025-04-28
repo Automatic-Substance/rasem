@@ -33,7 +33,7 @@ export default function Pillars(props: PillarsProps) {
     {
       title: "Spaces",
       description:
-        "Architectural marvels and sanctuaries founded on a collective commitment to fostering the holistic wellbeing of individuals and communities with a shared love of life.",
+        "With both form and function in mind, spaces can be as much a sanctuary, as they are stimulus for inspiration. To live with greater intention, we must reshape our perspective, and perspective begins with our surroundings. ",
       icon: <SpaceIcon />,
       imageOne: SpaceImageOne,
       imageTwo: SpaceImageTwo,
@@ -41,7 +41,7 @@ export default function Pillars(props: PillarsProps) {
     {
       title: "Environment",
       description:
-        "A partnership with Mother Nature to craft harmonious and sustainable experiences that transcends generations.",
+        "The world we shape, we shape for generations to come. To sustain progress, we create with purpose– choosing environments that awaken presence and spark connection, while transforming them for the better without compromising the surrounding ecosystem.",
       icon: <EnvironmentIcon />,
       imageOne: EnvImageOne,
       imageTwo: EnvImageTwo,
@@ -49,7 +49,7 @@ export default function Pillars(props: PillarsProps) {
     {
       title: "Wellness",
       description:
-        "Prioritising quality of life through the lens of holistic wellness, from the wisdom of ancient practices to modern therapies to nurture mental, physical and spiritual vitality.",
+        "The mastery of time and life requires the mastery of mind and body. Our blend of ancient wisdom and cutting-edge science designs lifestyles that heal, transform, and enhance, ultimately elevating vitality. ",
       icon: <WellnessIcon />,
       imageOne: WellnessImageOne,
       imageTwo: WellnessImageTwo,
@@ -57,7 +57,7 @@ export default function Pillars(props: PillarsProps) {
     {
       title: "Technology",
       description:
-        "Seamlessly leveraging cutting-edge systems, biotechnology, and artificial intelligence into daily wellbeing habits, pushing the boundaries of what it means to live a quality life.",
+        "A catalyst of advancements– through partnerships with exceptional brands and extraordinary people, we pioneer solutions that disrupt what is possible ​with the human body, longevity, and the way we live. ​",
       icon: <TechIcon />,
       imageOne: TechImageOne,
       imageTwo: TechImageTwo,
@@ -65,7 +65,7 @@ export default function Pillars(props: PillarsProps) {
     {
       title: "People",
       description:
-        "Observing wellness not only as an individual pursuit but also as a collective responsibility in order to develop a healthy community.",
+        "From design to technology, everything begins with those who embark on this journey and a shared commitment to values that uplift and support. It is through kindness, empathy, and collaboration that we find the wisdom to guide together",
       icon: <PeopleIcon />,
       imageOne: PeopleImageOne,
       imageTwo: PeopleImageTwo,

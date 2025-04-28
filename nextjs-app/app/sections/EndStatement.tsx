@@ -26,15 +26,16 @@ export default function EndStatement(props: EndStatementProps) {
       <div className="z-10 relative size-full text-white flex items-center justify-center px-5">
         <motion.div
           style={{ opacity: text_opacity }}
-          className="w-full max-w-lg text-center space-y-6 lg:space-y-14"
+          className="w-full max-w-xl text-center space-y-6 lg:space-y-14"
         >
           <h2 className="text-2xl lg:text-5xl font-normal">
-            Commune with the future of{" "}
-            <span className="italic">holistic wellness</span>.
+            Where <span className="italic">time</span> is not measured,
+            <br />
+            but <span className="italic">mastered</span>.
           </h2>
-          <p className="uppercase font-heading tracking-widest text-[10px] lg:text-base">
+          {/* <p className="uppercase font-heading tracking-widest text-[10px] lg:text-base">
             A vision materialising in 2026.
-          </p>
+          </p> */}
         </motion.div>
       </div>
       <motion.div

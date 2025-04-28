@@ -36,18 +36,21 @@ export default function OurVision(props: OurVisionProps) {
               OUR VISION
             </motion.h2>
             <motion.p variants={animation} className="text-2xl w-5/6">
-              The new benchmark in{" "}
+              Architects of mastery: The new benchmark in
               <span className="italic">wellness real-estate.</span>
             </motion.p>
           </div>
           <motion.p variants={animation} className="text-base w-full">
-            The new global benchmark for wellness real estate where cutting-edge
-            science, heritage, and bespoke luxury coexist. The brand’s mission
-            is to create environments where elite living converges with
-            transformative well-being solutions. Lorem ipsum, dolor, sit, amet,
-            and consectetur. Donec feugiat mi in ex fringilla, quis egestas odio
-            auctor. Proin sit amet condimentum ipsum, eu sodales metus. Quisque
-            eu dolor posuere, eleifend ligula eget, hendrerit erat.
+            RASEM masters life through three lenses:{" "}
+            <span className="italic font-semibold">
+              real estate investment, wellness, and innovation.
+            </span>{" "}
+            From spaces that shift perspective, experiences that enhance
+            vitality, and ventures that shape the future, each discipline
+            reinforces the next—forming a seamless ecosystem for a lifeophilic
+            way of life. Together, they create destinations where time can be
+            extended and spent more meaningfully, advancing longevity into
+            legacy.
           </motion.p>
           <motion.div
             variants={animation}
@@ -78,7 +81,7 @@ export default function OurVision(props: OurVisionProps) {
                   OUR VISION
                 </motion.h2>
                 <motion.p variants={animation} className="text-5xl w-5/6">
-                  The new benchmark in{" "}
+                  Architects of mastery: The new benchmark in{" "}
                   <span className="italic">wellness real-estate.</span>
                 </motion.p>
               </div>
@@ -97,14 +100,16 @@ export default function OurVision(props: OurVisionProps) {
             </div>
             <div className="col-span-5 flex items-center">
               <motion.p variants={animation} className="text-lg w-4/5">
-                The new global benchmark for wellness real estate where
-                cutting-edge science, heritage, and bespoke luxury coexist. The
-                brand’s mission is to create environments where elite living
-                converges with transformative well-being solutions. Lorem ipsum,
-                dolor, sit, amet, and consectetur. Donec feugiat mi in ex
-                fringilla, quis egestas odio auctor. Proin sit amet condimentum
-                ipsum, eu sodales metus. Quisque eu dolor posuere, eleifend
-                ligula eget, hendrerit erat.
+                RASEM masters life through three lenses:{" "}
+                <span className="italic font-semibold">
+                  real estate investment, wellness, and innovation.
+                </span>{" "}
+                From spaces that shift perspective, experiences that enhance
+                vitality, and ventures that shape the future, each discipline
+                reinforces the next—forming a seamless ecosystem for a
+                lifeophilic way of life. Together, they create destinations
+                where time can be extended and spent more meaningfully,
+                advancing longevity into legacy.
               </motion.p>
             </div>
           </div>
