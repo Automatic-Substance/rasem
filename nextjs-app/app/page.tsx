@@ -7,11 +7,9 @@ import Pillars from "@/app/sections/Pillars";
 import OurVision from "@/app/sections/OurVision";
 import OurPhilosophy from "@/app/sections/OurPhilosophy";
 import CollectiveVision from "@/app/sections/CollectiveVision";
+import Banner from "@/app/sections/Banner";
 
 import { AllPosts } from "@/app/components/Posts";
-import GetStartedCode from "@/app/components/GetStartedCode";
-import Image from "next/image";
-import DubaiImage from "@/app/assets/images/dubai.webp";
 
 export default async function Page() {
   return (
@@ -28,15 +26,7 @@ export default async function Page() {
         </div>
       </div> */}
       <OurPhilosophy />
-      <div className="w-full aspect-[1.43] lg:aspect-[1.84] relative">
-        <Image
-          sizes="100vw"
-          objectFit="cover"
-          fill
-          src={DubaiImage}
-          alt="Dubai Image"
-        />
-      </div>
+      <Banner />
       <OurVision />
       <Visioniaries />
       <Pillars />

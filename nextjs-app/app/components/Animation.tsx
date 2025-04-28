@@ -61,7 +61,7 @@ export function FadeIn({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={animation}
       className={className}
       {...props}
@@ -101,7 +101,7 @@ export function StaggerIn({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       variants={staggerAnimation}
       className={className}
       {...props}
