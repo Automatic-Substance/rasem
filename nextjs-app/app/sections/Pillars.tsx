@@ -90,7 +90,7 @@ export default function Pillars(props: PillarsProps) {
     },
   });
   return (
-    <div className="relative w-full select-none bg-white py-24">
+    <div className="relative w-full select-none bg-white py-32 lg:py-24">
       <div className="relative w-ful">
         <div
           ref={sliderRef}
@@ -114,7 +114,7 @@ export default function Pillars(props: PillarsProps) {
           ))}
         </div>
         {loaded && instanceRef.current && (
-          <div className="absolute left-24 bottom-0 flex gap-12">
+          <div className="absolute left-10 lg:left-24 -bottom-16 lg-bottom-0 flex gap-12">
             <div
               className="rotate-180 transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
               onClick={() => instanceRef.current?.prev()}
