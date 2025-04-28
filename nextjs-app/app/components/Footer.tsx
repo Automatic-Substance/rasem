@@ -39,7 +39,7 @@ export default function Footer() {
             <ContactForm />
           </motion.div>
           <div className="lg:hidden text-xs mt-14">
-            <p>Copyright © {year} Lorem Group Ltd.</p>
+            <p>Copyright © {year} RASEM Investments LLC</p>
             <p>All rights reserved.</p>
           </div>
         </div>
