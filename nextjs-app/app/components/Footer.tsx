@@ -19,7 +19,7 @@ export default function Footer() {
             <p>All rights reserved.</p>
           </motion.div>
         </div>
-        <div className="col-span-7 text-center lg:col-span-4">
+        <div className="col-span-7 text-center lg:text-left lg:col-span-4">
           <motion.p variants={animation} className="text-lg mb-14">
             The new global benchmark for wellness real estate—where cutting-edge
             science, heritage, and bespoke luxury coexist. The brand’s mission

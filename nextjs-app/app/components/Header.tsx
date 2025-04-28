@@ -36,7 +36,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed z-50 w-full flex">
+    <header className="fixed z-20 w-full flex">
       <div className="container py-6 sm:px-5 flex justify-center">
         <nav>
           <motion.div

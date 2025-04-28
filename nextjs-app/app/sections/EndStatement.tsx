@@ -21,7 +21,7 @@ export default function EndStatement(props: EndStatementProps) {
   return (
     <div
       ref={ref}
-      className="relative h-svh bg-primary-background overflow-hidden"
+      className="relative h-svh bg-primary-background overflow-hidden z-30"
     >
       <div className="z-10 relative size-full text-white flex items-center justify-center px-5">
         <motion.div
