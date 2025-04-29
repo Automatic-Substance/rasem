@@ -79,6 +79,8 @@ body {
 }
 
 textarea,
+input,
+input[type],
 input[type="text"],
 input[type="button"],
 input[type="submit"] {
