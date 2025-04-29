@@ -51,7 +51,9 @@ export default function Pillar({
           </motion.div>
         </div>
         <div className="space-y-14 mx-10">
-          <motion.div variants={animation}>{icon}</motion.div>
+          <motion.div className="h-[200px]" variants={animation}>
+            {icon}
+          </motion.div>
           <div className="space-y-4">
             <motion.h2
               variants={animation}

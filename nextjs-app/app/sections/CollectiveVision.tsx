@@ -45,7 +45,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
   );
   return (
     <>
-      <div ref={ref} className="relative h-[300vh] bg-background" {...props}>
+      <div ref={ref} className="relative h-[200vh] bg-background" {...props}>
         <div className="w-full h-screen hidden sticky top-0 px-12 py-12 lg:flex">
           <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
