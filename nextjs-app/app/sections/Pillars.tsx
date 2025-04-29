@@ -17,6 +17,7 @@ import TechIcon from "@/app/assets/icons/technology-graphic.svg";
 import PeopleImageOne from "@/app/assets/images/pillar-people-1.png";
 import PeopleImageTwo from "@/app/assets/images/pillar-people-2.webp";
 import PeopleIcon from "@/app/assets/icons/people-graphic.svg";
+import cn from "classnames";
 
 import ChevronIcon from "@/app/assets/icons/chevron.svg";
 
@@ -74,7 +75,7 @@ export default function Pillars(props: PillarsProps) {
 
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
-    loop: true,
+    loop: false,
     slides: slides.length,
     created() {
       setLoaded(true);
@@ -89,6 +90,10 @@ export default function Pillars(props: PillarsProps) {
       setOpacities(new_opacities);
     },
   });
+
+  const navClasses =
+    "transition-all duration-200 ease-in-out italic hover:text-primary/50 flex p-1 items-center justify-center cursor-pointer text-base lg:text-lg";
+
   return (
     <div className="relative w-full select-none bg-white py-32 lg:py-24">
       <div className="relative w-ful">
@@ -114,18 +119,20 @@ export default function Pillars(props: PillarsProps) {
           ))}
         </div>
         {loaded && instanceRef.current && (
-          <div className="absolute left-10 lg:left-24 -bottom-16 lg-bottom-0 flex gap-12">
+          <div className="absolute pl-10 pr-10 w-full lg:pl-24 lg:pr-12 lg:w-1/2 -bottom-16 lg:bottom-4 flex justify-between">
             <div
-              className="rotate-180 transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
+              className={cn(navClasses, { "opacity-0": currentSlide === 0 })}
               onClick={() => instanceRef.current?.prev()}
             >
-              <ChevronIcon />
+              ← Previous
             </div>
             <div
-              className="transition-all duration-200 ease-in-out hover:bg-primary/5 flex p-1 items-center justify-center rounded-full cursor-pointer"
+              className={cn(navClasses, {
+                "opacity-0": currentSlide === slides.length - 1,
+              })}
               onClick={() => instanceRef.current?.next()}
             >
-              <ChevronIcon />
+              Next →
             </div>
           </div>
         )}
