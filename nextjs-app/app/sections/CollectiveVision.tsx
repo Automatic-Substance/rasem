@@ -37,7 +37,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
   });
 
   const mainWrapperClasses = cn(
-    "flex flex-col gap-12 sticky top-0 z-10 lg:absolute w-full h-screen lg:top-auto lg:bottom-0 left-0 items-center justify-center transition-all duration-200 ease-in-out",
+    "flex flex-col gap-12 relative top-0 z-10 lg:absolute w-full h-screen lg:top-auto lg:bottom-0 left-0 items-center justify-center transition-all duration-200 ease-in-out",
     {
       "text-primary lg:text-primary": !whiteText,
       "text-white lg:text-primary": whiteText,
@@ -45,7 +45,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
   );
   return (
     <>
-      <div ref={ref} className="relative h-[200vh] bg-background" {...props}>
+      <div ref={ref} className="relative lg:h-[200vh] bg-background" {...props}>
         <div className="w-full h-screen hidden sticky top-0 px-12 py-12 lg:flex">
           <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
@@ -96,7 +96,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
         </div>
         <div
           ref={refMobile}
-          className="lg:hidden bg-black h-screen w-full flex-1 absolute bottom-0 left-0 z-0"
+          className="lg:hidden bg-black h-screen w-full flex-1 relative bottom-0 left-0 z-0"
         >
           <Image
             sizes="100vw"
