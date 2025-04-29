@@ -72,7 +72,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           </FadeIn>
         </div>
         <div id="collective-vision" className={mainWrapperClasses}>
-          <FadeIn className="text-3xl lg:text-6xl text-center">
+          <FadeIn className="text-3xl lg:text-5xl text-center">
             A<br />
             Collective
             <br />
@@ -83,7 +83,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
             <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
           </FadeIn>
           <FadeIn className="flex flex-col items-center gap-14" delay={0.2}>
-            <div className="text-3xl lg:text-6xl text-center">
+            <div className="text-3xl lg:text-5xl text-center">
               <span className="italic">Life measured</span>
               <br />
               not in time,

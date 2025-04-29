@@ -89,7 +89,7 @@ export default function Visioniaries(props: VisioniariesProps) {
         </motion.div>
         <div className="col-span-5 px-10 flex items-center">
           <div className="flex flex-col gap-14 items-start">
-            <motion.h2 variants={animation} className="text-6xl leading-[1.5]">
+            <motion.h2 variants={animation} className="text-5xl leading-[1.5]">
               A <span className="italic">Collaboration</span>
               <br />
               between
