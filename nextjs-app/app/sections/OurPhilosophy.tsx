@@ -20,7 +20,10 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
           >
             Our Philosophy
           </motion.h2>
-          <motion.p variants={animation} className="text-2xl w-full text-right">
+          <motion.p
+            variants={animation}
+            className="text-2xl/[1.16] w-full text-right"
+          >
             A preface to <span className="italic">Lifeophilic:</span> Reshape
             life by reclaiming time.
           </motion.p>
@@ -85,13 +88,13 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             <div className="col-span-5 flex justify-between">
               <motion.h2
                 variants={animation}
-                className="tracking-widest font-heading uppercase"
+                className="tracking-widest font-heading uppercase text-xs xl:text-base"
               >
                 Our Philosophy
               </motion.h2>
               <motion.p
                 variants={animation}
-                className="text-5xl w-4/6 text-right"
+                className="text-3xl/[1.16] xl:text-5xl/[1.16] w-4/6 text-right"
               >
                 A preface to <span className="italic">Lifeophilic:</span>{" "}
                 Reshape life by reclaiming time.
@@ -115,11 +118,11 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             </div>
           </div>
           <div className="col-span-4 grid grid-cols-subgrid gap-x-12">
-            <div className="col-start-2 col-span-3 flex gap-5 items-start">
-              <motion.div
-                variants={animation}
-                className="flex-1 aspect-[.67] relative"
-              >
+            <motion.div
+              variants={animation}
+              className="col-start-2 col-span-3 flex gap-5 items-start"
+            >
+              <div className="flex-1 aspect-[.67] relative">
                 <Image
                   sizes="100vw"
                   objectFit="cover"
@@ -127,11 +130,8 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                   src={ImageTwo}
                   alt="Two hands"
                 />
-              </motion.div>
-              <motion.div
-                variants={animation}
-                className="flex-1 aspect-[.67] relative"
-              >
+              </div>
+              <div className="flex-1 aspect-[.67] relative">
                 <Image
                   sizes="100vw"
                   objectFit="cover"
@@ -139,9 +139,9 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                   src={ImageThree}
                   alt="Girl on patio chair overlooking the ocean"
                 />
-              </motion.div>
-            </div>
-            <div className="col-span-4 flex items-center px-12">
+              </div>
+            </motion.div>
+            <div className="col-span-4 2xl:col-span-3 flex items-center px-12 text-base xl:text-lg">
               <motion.p variants={animation}>
                 To live lifeophilic is to embrace that a life well lived is not
                 defined by longevity alone but by a commitment to fullness,
