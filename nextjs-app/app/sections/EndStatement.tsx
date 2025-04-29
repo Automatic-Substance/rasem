@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import BigImage from "@/app/assets/images/end-statement.webp";
+import BigImage from "@/app/assets/images/end-statement-2.png";
 import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 
@@ -17,19 +17,22 @@ export default function EndStatement(props: EndStatementProps) {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
   const scale = useMotionValue(1.02);
 
-  const text_opacity = useTransform(scrollYProgress, [0, 0.6], [0, 1]);
+  const text_opacity = useTransform(scrollYProgress, [0.5, 0.8], [0, 1]);
   return (
     <div
       ref={ref}
       className="relative h-svh bg-primary-background overflow-hidden z-30"
     >
-      <div className="z-10 relative size-full text-white flex items-center justify-center px-5">
+      <div className="z-10 relative size-full text-primary flex items-center justify-center px-5">
         <motion.div
           style={{ opacity: text_opacity }}
           className="w-full max-w-xl text-center space-y-6 lg:space-y-14"
         >
           <h2 className="text-2xl lg:text-5xl font-normal">
-            Where <span className="italic">time</span> is not measured,
+            Where <span className="italic">time</span>
+            <br />
+            is not measured,
+            <br />
             <br />
             but <span className="italic">mastered</span>.
           </h2>

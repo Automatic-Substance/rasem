@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HeroImage from "@/app/assets/images/hero_image.webp";
+import HeroImage from "@/app/assets/images/hero_image_2.png";
 import { useCallback, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLenis } from "lenis/react";
