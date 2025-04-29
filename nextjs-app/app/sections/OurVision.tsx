@@ -35,7 +35,7 @@ export default function OurVision(props: OurVisionProps) {
             >
               OUR VISION
             </motion.h2>
-            <motion.p variants={animation} className="text-2xl w-5/6">
+            <motion.p variants={animation} className="text-2xl/[1.25] w-5/6">
               Architects of mastery: The new benchmark in
               <span className="italic">wellness real-estate.</span>
             </motion.p>
@@ -76,11 +76,14 @@ export default function OurVision(props: OurVisionProps) {
               <div className="col-span-3 flex flex-col justify-between">
                 <motion.h2
                   variants={animation}
-                  className="tracking-widest font-heading"
+                  className="tracking-widest font-heading text-xs xl:text-base"
                 >
                   OUR VISION
                 </motion.h2>
-                <motion.p variants={animation} className="text-5xl w-5/6">
+                <motion.p
+                  variants={animation}
+                  className="text-3xl/[1.16] xl:text-5xl/[1.16] w-5/6"
+                >
                   Architects of mastery: The new benchmark in{" "}
                   <span className="italic">wellness real-estate.</span>
                 </motion.p>
@@ -99,7 +102,10 @@ export default function OurVision(props: OurVisionProps) {
               </motion.div>
             </div>
             <div className="col-span-5 flex items-center">
-              <motion.p variants={animation} className="text-lg w-4/5">
+              <motion.p
+                variants={animation}
+                className="text-base xl:text-lg w-4/5 2xl:w-3/5"
+              >
                 RASEM masters life through three lenses:{" "}
                 <span className="italic font-semibold">
                   real estate investment, wellness, and innovation.

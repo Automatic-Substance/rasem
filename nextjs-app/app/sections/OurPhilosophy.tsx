@@ -22,7 +22,7 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
           </motion.h2>
           <motion.p
             variants={animation}
-            className="text-2xl/[1.16] w-full text-right"
+            className="text-2xl/[1.25] w-full text-right"
           >
             A preface to <span className="italic">Lifeophilic:</span> Reshape
             life by reclaiming time.
