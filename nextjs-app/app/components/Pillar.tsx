@@ -55,6 +55,12 @@ export default function Pillar({
             {icon}
           </motion.div>
           <div className="space-y-4">
+            <motion.h3
+              variants={animation}
+              className="tracking-widest font-heading text-[10px] uppercase"
+            >
+              Our Pillars
+            </motion.h3>
             <motion.h2
               variants={animation}
               className="uppercase font-heading text-xl tracking-wide"
@@ -100,14 +106,20 @@ export default function Pillar({
             />
           </motion.div>
         </div>
-        <div className="absolute left-0 bottom-0 h-1/2 w-1/3 pl-24 space-y-10">
+        <div className="absolute left-0 bottom-0 h-1/2 w-2/5 pl-24 space-y-10">
+          <motion.h3
+            variants={animation}
+            className="tracking-widest font-heading text-xs xl:text-base uppercase"
+          >
+            Our Pillars
+          </motion.h3>
           <motion.h2
             variants={animation}
-            className="uppercase font-heading text-3xl tracking-wide"
+            className="uppercase font-heading text-2xl xl:text-3xl tracking-wide"
           >
             {title}
           </motion.h2>
-          <motion.p variants={animation} className="text-xl">
+          <motion.p variants={animation} className="text-base xl:text-xl">
             {description}
           </motion.p>
         </div>
