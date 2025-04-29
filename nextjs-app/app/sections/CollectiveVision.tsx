@@ -2,8 +2,8 @@
 import { useRef, useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
-import ImageOne from "@/app/assets/images/collective-vision-1.png";
-import ImageTwo from "@/app/assets/images/collective-vision-2.webp";
+import ImageOne from "@/app/assets/images/collective-vision-3.webp";
+import ImageTwo from "@/app/assets/images/collective-vision-4.webp";
 import { FadeIn, Parallax } from "@/app/components/Animation";
 import {
   motion,
@@ -63,6 +63,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
             <Parallax ref={ref}>
               <Image
                 sizes="100vw"
+                objectPosition="70% 50%"
                 objectFit="cover"
                 fill
                 src={ImageTwo}

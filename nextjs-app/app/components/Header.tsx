@@ -3,10 +3,13 @@
 import RasemLogo from "@/app/assets/icons/rasem-logo.svg";
 import { useState, useEffect } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
+import { useMedia } from "react-use";
 
 export default function Header() {
   const [smallLogo, setSmallLogo] = useState(false);
   const { scrollYProgress, scrollY } = useScroll();
+
+  const isDesktop = useMedia("(min-width: 1024px)", false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 10 && !smallLogo) {
@@ -22,16 +25,16 @@ export default function Header() {
 
   const logoAnimation = {
     large: {
-      width: "280px",
-      translateY: 80,
+      width: isDesktop ? "280px" : "140px",
+      translateY: isDesktop ? 80 : 20,
       transition: {
         ease: "easeInOut",
         duration: 0.2,
       },
     },
     small: {
-      width: "120px",
-      translateY: 80,
+      width: isDesktop ? "120px" : "90px",
+      translateY: isDesktop ? 80 : 20,
       transition: {
         ease: "easeInOut",
         duration: 0.2,

@@ -1,36 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import JuliaImage from "@/app/assets/images/profile-Julia.jpg";
-import FrederikImage from "@/app/assets/images/profile-Frederik.jpg";
-import JonasImage from "@/app/assets/images/profile-Jonas-Bjerre-Poulsen-kopier-1-scaled.jpg";
-import SandieImage from "@/app/assets/images/profile-Sandie-web-1280x1760.jpg";
-import Profile from "@/app/components/Profile";
-import { useKeenSlider } from "keen-slider/react";
+import React from "react";
 import Image from "next/image";
-import CanyonImage from "@/app/assets/images/canyons.png";
+import GladeImage from "@/app/assets/images/glade.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
 
 interface VisioniariesProps {}
 
 export default function Visioniaries(props: VisioniariesProps) {
-  const [ActiveIndex, setActiveIndex] = useState<number>(0);
-  const [sliderRef] = useKeenSlider({
-    initial: 0,
-    breakpoints: {
-      "(min-width: 1024px)": {
-        slides: { perView: 3.2, spacing: 50 },
-      },
-    },
-    slides: {
-      perView: 1.5,
-      spacing: 20,
-    },
-    slideChanged: (slider) => {
-      setActiveIndex(slider.track.details.rel);
-    },
-  });
   return (
     <div className="bg-background">
       <StaggerIn className="lg:hidden mx-10 mt-16">
@@ -58,8 +36,8 @@ export default function Visioniaries(props: VisioniariesProps) {
               sizes="100vw"
               objectFit="cover"
               fill
-              src={CanyonImage}
-              alt="Canyon Image"
+              src={GladeImage}
+              alt="Glade Image"
             />
           </motion.div>
           <div className="text-base relative mt-3 space-y-5">
@@ -83,8 +61,8 @@ export default function Visioniaries(props: VisioniariesProps) {
             sizes="100vw"
             objectFit="cover"
             fill
-            src={CanyonImage}
-            alt="Canyon Image"
+            src={GladeImage}
+            alt="Glade Image"
           />
         </motion.div>
         <div className="col-span-5 px-10 flex items-center">
@@ -117,82 +95,71 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
         </div>
       </StaggerIn>
-      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-8 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
-        <h2 className="lg:hidden uppercase text-[10px] font-heading text-center mb-8 tracking-widest">
-          Partners
+      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
+        <h2 className="uppercase text-[10px] lg:text-base font-heading text-center mb-16 lg:mb-24 tracking-widest">
+          Our Partners
         </h2>
-        <div
-          ref={sliderRef}
-          className="keen-slider"
-          style={{ overflow: "unset" }}
-          {...props}
-        >
-          <div className="keen-slider__slide">
-            <motion.div variants={animation}>
-              <Profile
-                mode={1}
-                name="SAFI QUrashi"
-                title="LOREM IPSUM"
-                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
-        integrating advanced technology, healthcare innovation, and holistic
-        wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
-        ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
-        fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-                image={JonasImage}
-              />
-            </motion.div>
+        <div className="grid grid-col-1 lg:grid-cols-4 gap-14">
+          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
+            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+              SAFI
+              <br />
+              QUrashi
+            </h3>
+            <p className="lg:text-lg">
+              Driven by a relentless pursuit of transformative impact, Safi is a
+              serial entrepreneur with 27 years of cross-industry experience.
+              Known for his fearless leadership and infectious energy, he builds
+              ventures that endure and inspire. With a philosophy rooted in
+              innovation and long-term value creation, Safi unites top-tier
+              talent to shape industries, redefine possibilities, and forge a
+              better future.
+            </p>
           </div>
-          <div className="keen-slider__slide">
-            <motion.div variants={animation}>
-              <Profile
-                mode={2}
-                name="REGINE LABROSSE"
-                title="LOREM IPSUM"
-                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
-        integrating advanced technology, healthcare innovation, and holistic
-        wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
-        ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
-        fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-                image={JuliaImage}
-              />
-            </motion.div>
+          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
+            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+              ELLIOTT
+              <br />
+              BACHMANN
+            </h3>
+            <p className="lg:text-lg">
+              Elliott brings over 20 years of expertise in global finance, risk,
+              and regulatory strategy. He has advised institutions including
+              BlackRock, Morgan Stanley, and AXA — designing secure, scalable
+              frameworks that align innovation with governance. His strategic
+              clarity and technical depth make him a trusted guide in complex
+              financial environments.
+            </p>
           </div>
-          <div className="keen-slider__slide">
-            <motion.div variants={animation}>
-              <Profile
-                mode={1}
-                name="REGINE LABROSSE"
-                title="LOREM IPSUM"
-                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
-        integrating advanced technology, healthcare innovation, and holistic
-        wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
-        ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
-        fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-                image={SandieImage}
-              />
-            </motion.div>
+          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
+            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+              REGINE
+              <br />
+              LABROSSE
+            </h3>
+            <p className="lg:text-lg">
+              A globally recognised authority in branding and market strategy,
+              Regine brings three decades of leadership in licensing, IP, and
+              innovation. Having worked with icons like Disney, Netflix, and
+              Mercedes-Benz, she crafts brand ecosystems that scale with purpose
+              — translating cultural influence into long-term relevance.
+            </p>
           </div>
-          <div className="keen-slider__slide">
-            <motion.div variants={animation}>
-              <Profile
-                mode={2}
-                name="REGINE LABROSSE"
-                title="LOREM IPSUM"
-                description="Pioneering a new paradigm in ultra-luxury real estate by seamlessly
-        integrating advanced technology, healthcare innovation, and holistic
-        wellness. Donec sit amet erat sed neque vehicula convallis. Phasellus et
-        ullamcorper tortor. Cras lacinia dignissim dui, vel ultricies lectus
-        fringilla eget. Donec neque massa, tincidunt quis nunc at, vestibulum."
-                image={FrederikImage}
-              />
-            </motion.div>
+          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
+            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+              SHARENA
+              <br />
+              HABR
+            </h3>
+            <p className="lg:text-lg">
+              Sharena is a strategic operator with deep knowledge in
+              transforming vision into scalable systems. With experience across
+              organisations such as Dubai South, GAPCorp, and The National
+              Aquarium, she brings clarity, discipline, and adaptability —
+              guiding complex organisations toward sustainable growth through
+              thoughtful design and precision.
+            </p>
           </div>
-        </div>
-        <div className="relative h-[2px] w-4/6 lg:w-full max-w-4xl bg-[#D9D9D9] m-auto mt-16 lg:mt-10">
-          <div
-            className="bg-primary absolute left-0 top-0 h-full transition-all duration-200 ease-in-out"
-            style={{ width: `${((ActiveIndex + 1) / 5) * 100}%` }}
-          ></div>
         </div>
       </StaggerIn>
     </div>
