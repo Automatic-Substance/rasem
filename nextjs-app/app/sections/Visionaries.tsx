@@ -67,7 +67,10 @@ export default function Visioniaries(props: VisioniariesProps) {
         </motion.div>
         <div className="col-span-5 px-10 flex items-center">
           <div className="flex flex-col gap-14 items-start">
-            <motion.h2 variants={animation} className="text-5xl leading-[1.5]">
+            <motion.h2
+              variants={animation}
+              className="text-3xl/[1.14] xl:text-5xl/[1.14]"
+            >
               A <span className="italic">Collaboration</span>
               <br />
               between
@@ -82,7 +85,7 @@ export default function Visioniaries(props: VisioniariesProps) {
               <div className="size-[6px] bg-primary rounded-full"></div>
               <div className="size-[6px] bg-primary rounded-full"></div>
             </motion.div>
-            <div className="text-xl relative left-[40%] w-[60%] space-y-5">
+            <div className="text-base xl:text-xl relative left-[40%] w-[60%] space-y-5">
               <motion.p variants={animation}>
                 RASEM [rā·sem]: to sketch or illustrate with intention
               </motion.p>
