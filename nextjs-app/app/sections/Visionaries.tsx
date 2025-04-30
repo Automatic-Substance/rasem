@@ -40,7 +40,7 @@ export default function Visioniaries(props: VisioniariesProps) {
               alt="Glade Image"
             />
           </motion.div>
-          <div className="text-base relative mt-3 space-y-5">
+          <div className="text-base relative mt-3 space-y-5 text-center">
             <motion.p variants={animation}>
               RASEM [rā·sem]: to sketch or illustrate with intention
             </motion.p>
@@ -98,16 +98,19 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
         </div>
       </StaggerIn>
-      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
+      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing max-w-[1800px] m-auto">
         <h2 className="uppercase text-[10px] lg:text-base font-heading text-center mb-16 lg:mb-24 tracking-widest">
           Our Partners
         </h2>
         <div className="grid grid-col-1 lg:grid-cols-4 gap-14">
           <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
             <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
-              SAFI
-              <br />
-              QUrashi
+              <span className="hidden lg:block">
+                SAFI
+                <br />
+                QUrashi
+              </span>
+              <span className="lg:hidden">SAFI QUrashi</span>
             </h3>
             <p className="lg:text-lg">
               Driven by a relentless pursuit of transformative impact, Safi is a
@@ -121,9 +124,12 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
           <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
             <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
-              ELLIOTT
-              <br />
-              BACHMANN
+              <span className="hidden lg:block">
+                ELLIOTT
+                <br />
+                BACHMANN
+              </span>
+              <span className="lg:hidden">ELLIOTT BACHMANN</span>
             </h3>
             <p className="lg:text-lg">
               Elliott brings over 20 years of expertise in global finance, risk,
@@ -136,9 +142,12 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
           <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
             <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
-              REGINE
-              <br />
-              LABROSSE
+              <span className="hidden lg:block">
+                REGINE
+                <br />
+                LABROSSE
+              </span>
+              <span className="lg:hidden">REGINE LABROSSE</span>
             </h3>
             <p className="lg:text-lg">
               A globally recognised authority in branding and market strategy,
@@ -150,9 +159,12 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
           <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
             <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
-              SHARENA
-              <br />
-              HABR
+              <span className="hidden lg:block">
+                SHARENA
+                <br />
+                HABR
+              </span>
+              <span className="lg:hidden">SHARENA HABR</span>
             </h3>
             <p className="lg:text-lg">
               Sharena is a strategic operator with deep knowledge in

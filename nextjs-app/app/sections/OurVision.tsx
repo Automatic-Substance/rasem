@@ -36,7 +36,7 @@ export default function OurVision(props: OurVisionProps) {
               OUR VISION
             </motion.h2>
             <motion.p variants={animation} className="text-2xl/[1.25] w-5/6">
-              Architects of mastery: The new benchmark in
+              Architects of mastery: The new benchmark in{" "}
               <span className="italic">wellness real-estate.</span>
             </motion.p>
           </div>

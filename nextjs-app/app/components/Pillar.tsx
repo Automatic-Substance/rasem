@@ -106,7 +106,7 @@ export default function Pillar({
             />
           </motion.div>
         </div>
-        <div className="absolute left-0 bottom-0 h-1/2 w-2/5 pl-24 space-y-10">
+        <div className="absolute left-0 bottom-0 h-1/2 w-2/5 min-[1900px]:w-1/4 pl-24 space-y-10">
           <motion.h3
             variants={animation}
             className="tracking-widest font-heading text-xs xl:text-base uppercase"

@@ -4,7 +4,12 @@ import cn from "classnames";
 import Image from "next/image";
 import ImageOne from "@/app/assets/images/collective-vision-3.webp";
 import ImageTwo from "@/app/assets/images/collective-vision-4.webp";
-import { FadeIn, Parallax } from "@/app/components/Animation";
+import {
+  FadeIn,
+  Parallax,
+  StaggerIn,
+  animation,
+} from "@/app/components/Animation";
 import {
   motion,
   useScroll,
@@ -73,30 +78,39 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           </FadeIn>
         </div>
         <div id="collective-vision" className={mainWrapperClasses}>
-          <FadeIn className="flex flex-col gap-12 items-center" delay={0.4}>
-            <div className="text-3xl lg:text-5xl text-center">
-              A<br />
-              Collective
-              <br />
-              Vision
-            </div>
-            <div className="flex flex-col gap-4 relative">
-              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-            </div>
-          </FadeIn>
+          <StaggerIn className="flex flex-col gap-12">
+            <motion.div
+              variants={animation}
+              className="flex flex-col gap-12 items-center"
+            >
+              <div className="text-3xl lg:text-5xl text-center">
+                A<br />
+                Collective
+                <br />
+                Vision
+              </div>
+              <div className="flex flex-col gap-4 relative">
+                <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+                <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+              </div>
+            </motion.div>
 
-          <FadeIn className="flex flex-col items-center gap-14" delay={0.8}>
-            <div className="text-3xl lg:text-5xl text-center">
-              <span className="italic">Life measured</span>
-              <br />
-              not in time,
-              <br />
-              <span className="italic">but in meaning</span>
-            </div>
-            <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-          </FadeIn>
+            <motion.div
+              variants={animation}
+              className="flex flex-col items-center gap-14"
+            >
+              <div className="text-3xl lg:text-5xl text-center">
+                <span className="italic">Life measured</span>
+                <br />
+                not in time,
+                <br />
+                <span className="italic">but in meaning</span>
+              </div>
+              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+            </motion.div>
+          </StaggerIn>
         </div>
+
         <div
           ref={refMobile}
           className="lg:hidden bg-black h-screen w-full flex-1 relative bottom-0 left-0 z-0"

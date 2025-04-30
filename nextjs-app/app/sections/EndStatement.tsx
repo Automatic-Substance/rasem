@@ -26,7 +26,7 @@ export default function EndStatement(props: EndStatementProps) {
       <div className="z-10 relative size-full text-primary flex items-center justify-center px-5">
         <motion.div
           style={{ opacity: text_opacity }}
-          className="w-full max-w-xl text-center space-y-6 lg:space-y-14"
+          className="w-full max-w-xl text-center space-y-6 lg:space-y-14 pb-20 lg:pb-36"
         >
           <h2 className="text-2xl lg:text-5xl font-normal">
             Where <span className="italic">time</span>

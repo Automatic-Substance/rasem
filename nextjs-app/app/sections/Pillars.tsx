@@ -119,7 +119,7 @@ export default function Pillars(props: PillarsProps) {
           ))}
         </div>
         {loaded && instanceRef.current && (
-          <div className="absolute pl-10 pr-10 w-full lg:pl-24 lg:pr-12 lg:w-1/2 -bottom-16 lg:bottom-8 xl:bottom-16 flex justify-between">
+          <div className="absolute pl-10 pr-10 w-full lg:pl-24 lg:pr-12 lg:w-1/2 -bottom-16 lg:bottom-8 xl:bottom-24 min-[1900px]:bottom-72 flex justify-between">
             <div
               className={cn(navClasses, { "opacity-0": currentSlide === 0 })}
               onClick={() => instanceRef.current?.prev()}
