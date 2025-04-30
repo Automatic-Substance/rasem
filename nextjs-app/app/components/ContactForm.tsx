@@ -50,7 +50,7 @@ export default function ContactForm() {
       ...values,
     });
 
-    fetch("/", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: body,
@@ -80,6 +80,7 @@ export default function ContactForm() {
   return (
     <Form {...form}>
       <form
+        name="contact"
         onSubmit={form.handleSubmit(onSubmit)}
         data-netlify="true"
         className="grid grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-7"
