@@ -98,7 +98,7 @@ export default function Visioniaries(props: VisioniariesProps) {
           </div>
         </div>
       </StaggerIn>
-      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing">
+      <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing max-w-[1800px] m-auto">
         <h2 className="uppercase text-[10px] lg:text-base font-heading text-center mb-16 lg:mb-24 tracking-widest">
           Our Partners
         </h2>
