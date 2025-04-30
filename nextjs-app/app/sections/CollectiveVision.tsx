@@ -78,35 +78,35 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           </FadeIn>
         </div>
         <div id="collective-vision" className={mainWrapperClasses}>
-          <StaggerIn className="flex flex-col gap-12">
+          <StaggerIn className="flex flex-col gap-6 xl:gap-12">
             <motion.div
               variants={animation}
-              className="flex flex-col gap-12 items-center"
+              className="flex flex-col gap-6 xl:gap-12 items-center"
             >
-              <div className="text-3xl lg:text-5xl text-center">
+              <div className="text-3xl xl:text-5xl text-center">
                 A<br />
                 Collective
                 <br />
                 Vision
               </div>
               <div className="flex flex-col gap-4 relative">
-                <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-                <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+                <div className="size-[4px] xl:size-[6px] bg-primary rounded-full"></div>
+                <div className="size-[4px] xl:size-[6px] bg-primary rounded-full"></div>
               </div>
             </motion.div>
 
             <motion.div
               variants={animation}
-              className="flex flex-col items-center gap-14"
+              className="flex flex-col items-center gap-6 xl:gap-12"
             >
-              <div className="text-3xl lg:text-5xl text-center">
+              <div className="text-3xl xl:text-5xl text-center">
                 <span className="italic">Life measured</span>
                 <br />
                 not in time,
                 <br />
                 <span className="italic">but in meaning</span>
               </div>
-              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+              <div className="size-[4px] xl:size-[6px] bg-primary rounded-full"></div>
             </motion.div>
           </StaggerIn>
         </div>
