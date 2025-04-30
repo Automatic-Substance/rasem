@@ -40,7 +40,7 @@ export default function Visioniaries(props: VisioniariesProps) {
               alt="Glade Image"
             />
           </motion.div>
-          <div className="text-base relative mt-3 space-y-5">
+          <div className="text-base relative mt-3 space-y-5 text-center">
             <motion.p variants={animation}>
               RASEM [rā·sem]: to sketch or illustrate with intention
             </motion.p>
