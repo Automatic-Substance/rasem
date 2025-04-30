@@ -18,6 +18,9 @@ import { encodeToString } from "@/lib/utils";
 import { useState } from "react";
 
 const formSchema = z.object({
+  "form-name": z.string().min(2, {
+    message: "Form name must be at least 2 characters.",
+  }),
   fullname: z.string().min(2, {
     message: "Full name must be at least 2 characters.",
   }),
@@ -38,6 +41,7 @@ export default function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      "form-name": "contact",
       fullname: "",
       subjectline: "",
       message: "",
@@ -86,7 +90,18 @@ export default function ContactForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="grid grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-7"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <FormField
+          control={form.control}
+          name="form-name"
+          render={({ field }) => (
+            <FormItem className="hidden">
+              <FormControl>
+                <Input type="hidden" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="fullname"
@@ -156,6 +171,11 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
+        {hasSubmitted && (
+          <div className="font-heading uppercase text-white tracking-widest mb-2 text-sm">
+            Thank you
+          </div>
+        )}
         <Button
           type="submit"
           className="lg:mt-6 hover:bg-background/20 col-span-2 col-start-2 lg:col-start-1"
