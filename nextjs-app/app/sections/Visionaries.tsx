@@ -42,12 +42,14 @@ export default function Visioniaries(props: VisioniariesProps) {
           </motion.div>
           <div className="text-base relative mt-3 space-y-5 text-center">
             <motion.p variants={animation}>
-              RASEM [rā·sem]: to sketch or illustrate with intention
+              RASEM [<span className="italic">rā·sem</span>]: to sketch or
+              illustrate with intention
             </motion.p>
             <motion.p variants={animation}>
               Bound by a shared purpose to shape a new paradigm of living, the
               visionaries behind RASEM etch innovation and intent across an
-              enriched canvas - where lifeophilic design finds its form.
+              enriched canvas - where{" "}
+              <span className="italic">lifeophilic</span> design finds its form.
             </motion.p>
           </div>
         </div>
@@ -87,12 +89,15 @@ export default function Visioniaries(props: VisioniariesProps) {
             </motion.div>
             <div className="text-base xl:text-xl relative left-[40%] w-[60%] space-y-5">
               <motion.p variants={animation}>
-                RASEM [rā·sem]: to sketch or illustrate with intention
+                RASEM [<span className="italic">rā·sem</span>]: to sketch or
+                illustrate with intention
               </motion.p>
               <motion.p variants={animation}>
                 Bound by a shared purpose to shape a new paradigm of living, the
                 visionaries behind RASEM etch innovation and intent across an
-                enriched canvas - where lifeophilic design finds its form.
+                enriched canvas—where{" "}
+                <span className="italic">lifeophilic</span> design finds its
+                form.
               </motion.p>
             </div>
           </div>
@@ -167,12 +172,12 @@ export default function Visioniaries(props: VisioniariesProps) {
               <span className="lg:hidden">SHARENA HABR</span>
             </h3>
             <p className="lg:text-lg">
-              Sharena is a strategic operator with deep knowledge in
-              transforming vision into scalable systems. With experience across
-              organisations such as Dubai South, GAPCorp, and The National
-              Aquarium, she brings clarity, discipline, and adaptability —
-              guiding complex organisations toward sustainable growth through
-              thoughtful design and precision.
+              With over 15 years of experience, Sharena is a seasoned executive
+              with a broad background in operations, organisational design, and
+              strategic leadership. Her leadership is defined by a collaborative
+              and results-driven approach, and she has collaborated with
+              organizations such as Dubai South, Keturah, Al Qana and its
+              subsidiaries, and The National Aquarium.
             </p>
           </div>
         </div>

@@ -47,10 +47,10 @@ export default function OurVision(props: OurVisionProps) {
             </span>{" "}
             From spaces that shift perspective, experiences that enhance
             vitality, and ventures that shape the future, each discipline
-            reinforces the next—forming a seamless ecosystem for a lifeophilic
-            way of life. Together, they create destinations where time can be
-            extended and spent more meaningfully, advancing longevity into
-            legacy.
+            reinforces the next—forming a seamless ecosystem for a{" "}
+            <span className="italic">lifeophilic</span> way of life. Together,
+            they create destinations where time can be extended and spent more
+            meaningfully, advancing longevity into legacy.
           </motion.p>
           <motion.div
             variants={animation}
@@ -112,10 +112,10 @@ export default function OurVision(props: OurVisionProps) {
                 </span>{" "}
                 From spaces that shift perspective, experiences that enhance
                 vitality, and ventures that shape the future, each discipline
-                reinforces the next—forming a seamless ecosystem for a
-                lifeophilic way of life. Together, they create destinations
-                where time can be extended and spent more meaningfully,
-                advancing longevity into legacy.
+                reinforces the next—forming a seamless ecosystem for a{" "}
+                <span className="italic">lifeophilic</span> way of life.
+                Together, they create destinations where time can be extended
+                and spent more meaningfully, advancing longevity into legacy.
               </motion.p>
             </div>
           </div>

@@ -44,11 +44,12 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
         </div>
         <div className="items-center px-10 my-12">
           <motion.p variants={animation}>
-            To live lifeophilic is to embrace that a life well lived is not
-            defined by longevity alone but by a commitment to fullness, purpose,
-            and impact. For those who seek not more time, but more from time,
-            this pursuit becomes mastery: where vitality shapes the canvas, and
-            life becomes the masterpiece. Here, time is not simply spent—it is
+            To live <span className="italic">lifeophilic</span> is to embrace
+            that a life well lived is not defined by longevity alone but by a
+            commitment to fullness, purpose, and impact. For those who seek not
+            more time, but more <span className="italic">from</span> time, this
+            pursuit becomes mastery: where vitality shapes the canvas, and life
+            becomes the masterpiece. Here, time is not simply spent—it is
             reclaimed, reshaped, and commanded.
           </motion.p>
         </div>
@@ -143,12 +144,14 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             </motion.div>
             <div className="col-span-4 2xl:col-span-3 flex items-center px-12 text-base xl:text-lg">
               <motion.p variants={animation}>
-                To live lifeophilic is to embrace that a life well lived is not
-                defined by longevity alone but by a commitment to fullness,
-                purpose, and impact. For those who seek not more time, but more
-                from time, this pursuit becomes mastery: where vitality shapes
-                the canvas, and life becomes the masterpiece. Here, time is not
-                simply spent—it is reclaimed, reshaped, and commanded.
+                To live <span className="italic">lifeophilic</span> is to
+                embrace that a life well lived is not defined by longevity alone
+                but by a commitment to fullness, purpose, and impact. For those
+                who seek not more time, but more{" "}
+                <span className="italic">from</span> time, this pursuit becomes
+                mastery: where vitality shapes the canvas, and life becomes the
+                masterpiece. Here, time is not simply spent—it is reclaimed,
+                reshaped, and commanded.
               </motion.p>
             </div>
           </div>

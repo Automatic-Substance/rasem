@@ -25,8 +25,8 @@ export default function Footer() {
             investment, wellness, and innovation into one intentional ecosystem,
             we are a canvas for a life well-lived. Founded on a philosophy
             guided by the love of life itself, every element transforms how we
-            shape and spend precious time. Here, longevity becomes legacy. And
-            lifeophilic finds its form.
+            shape and spend precious time. Here, longevity becomes legacy. And{" "}
+            <span className="italic">lifeophilic</span> finds its form.
           </motion.p>
           <motion.div variants={animation} className="space-y-5">
             <h2 className="text-base lg:text-3xl uppercase font-heading font-normal">
