@@ -1,3 +1,5 @@
+"use client";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -82,9 +84,9 @@ export default function ContactForm() {
       <form
         name="contact"
         onSubmit={form.handleSubmit(onSubmit)}
-        data-netlify="true"
         className="grid grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-7"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <FormField
           control={form.control}
           name="fullname"
