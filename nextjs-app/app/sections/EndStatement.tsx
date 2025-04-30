@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import BigImage from "@/app/assets/images/end-statement-2.png";
+import MobileImage from "@/app/assets/images/ClosingImage+Tagline_Portrait.jpg";
+import BigImage from "@/app/assets/images/ClosingImage+Tagline_Landscape.jpg";
 import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 
@@ -28,14 +29,14 @@ export default function EndStatement(props: EndStatementProps) {
           style={{ opacity: text_opacity }}
           className="w-full max-w-xl text-center space-y-6 lg:space-y-14 pb-20 lg:pb-36"
         >
-          <h2 className="text-2xl lg:text-5xl font-normal">
+          {/* <h2 className="text-2xl lg:text-5xl font-normal">
             Where <span className="italic">time</span>
             <br />
             is not measured,
             <br />
             <br />
             but <span className="italic">mastered</span>.
-          </h2>
+          </h2> */}
           {/* <p className="uppercase font-heading tracking-widest text-[10px] lg:text-base">
             A vision materialising in 2026.
           </p> */}
@@ -47,6 +48,15 @@ export default function EndStatement(props: EndStatementProps) {
       >
         <Image
           sizes="100vw"
+          className="hidden lg:block"
+          objectFit="cover"
+          fill
+          src={BigImage}
+          alt="Hero Image"
+        />
+        <Image
+          sizes="100vw"
+          className="lg:hidden"
           objectFit="cover"
           fill
           src={BigImage}
