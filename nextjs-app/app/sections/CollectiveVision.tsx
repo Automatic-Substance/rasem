@@ -37,7 +37,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
   });
 
   const mainWrapperClasses = cn(
-    "flex flex-col gap-12 sticky top-0 z-10 lg:absolute w-full h-screen lg:top-auto lg:bottom-0 left-0 items-center justify-center transition-all duration-200 ease-in-out",
+    "flex flex-col gap-12 relative top-0 z-10 lg:absolute w-full h-screen lg:top-auto lg:bottom-0 left-0 items-center justify-center transition-all duration-200 ease-in-out",
     {
       "text-primary lg:text-primary": !whiteText,
       "text-white lg:text-primary": whiteText,
@@ -45,7 +45,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
   );
   return (
     <>
-      <div ref={ref} className="relative h-[200vh] bg-background" {...props}>
+      <div ref={ref} className="relative lg:h-[200vh] bg-background" {...props}>
         <div className="w-full h-screen hidden sticky top-0 px-12 py-12 lg:flex">
           <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
@@ -59,7 +59,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
             </Parallax>
           </FadeIn>
           <div className="h-full flex-1"></div>
-          <FadeIn className="bg-black h-full flex-1 relative" delay={0.8}>
+          <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
               <Image
                 sizes="100vw"
@@ -73,17 +73,20 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           </FadeIn>
         </div>
         <div id="collective-vision" className={mainWrapperClasses}>
-          <FadeIn className="text-3xl lg:text-5xl text-center">
-            A<br />
-            Collective
-            <br />
-            Vision
+          <FadeIn className="flex flex-col gap-12 items-center" delay={0.4}>
+            <div className="text-3xl lg:text-5xl text-center">
+              A<br />
+              Collective
+              <br />
+              Vision
+            </div>
+            <div className="flex flex-col gap-4 relative">
+              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+              <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
+            </div>
           </FadeIn>
-          <FadeIn className="flex flex-col gap-4 relative" delay={0.4}>
-            <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-            <div className="size-[4px] lg:size-[6px] bg-primary rounded-full"></div>
-          </FadeIn>
-          <FadeIn className="flex flex-col items-center gap-14" delay={0.2}>
+
+          <FadeIn className="flex flex-col items-center gap-14" delay={0.8}>
             <div className="text-3xl lg:text-5xl text-center">
               <span className="italic">Life measured</span>
               <br />
@@ -96,7 +99,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
         </div>
         <div
           ref={refMobile}
-          className="lg:hidden bg-black h-screen w-full flex-1 absolute bottom-0 left-0 z-0"
+          className="lg:hidden bg-black h-screen w-full flex-1 relative bottom-0 left-0 z-0"
         >
           <Image
             sizes="100vw"
