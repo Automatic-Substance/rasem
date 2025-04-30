@@ -7,7 +7,6 @@ body {
 }
 
 
-
 @layer base {
   :root {
         --background: 32, 19%, 92%;
@@ -81,6 +80,7 @@ body {
     button[aria-invalid="true"] {
       border-color: hsl(var(--destructive));
     }
+    
 }
 
 textarea,
