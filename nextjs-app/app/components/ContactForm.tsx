@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
+import { encodeToString } from "@/lib/utils";
+import { useState } from "react";
 
 const formSchema = z.object({
   fullname: z.string().min(2, {
@@ -30,6 +32,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const [hasSubmitted, setHasSubmitted] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,19 +45,43 @@ export default function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+
+    const body = encodeToString({
+      ...values,
+    });
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body,
+    })
+      .then(() => {
+        setHasSubmitted(true);
+        form.reset({
+          fullname: "",
+          subjectline: "",
+          email: "",
+          message: "",
+        });
+        setTimeout(() => setHasSubmitted(false), 5000);
+      })
+      .catch((error) => {});
   }
 
   const inputClasses = cn(
-    "font-heading placeholder:text-white placeholder:font-heading placeholder:uppercase placeholder:text-sm placeholder:tracking-widest bg-transparent focus-visible:outline-none resize-none"
+    "font-heading uppercase border-b-[0.5px] text-sm tracking-widest placeholder-white/40 focus:placeholder-white/0 placeholder:font-heading placeholder:uppercase placeholder:text-sm placeholder:tracking-widest bg-transparent focus-visible:outline-none resize-none"
   );
 
-  const textareaClasses = cn(inputClasses, "h-[42px]");
+  const textareaClasses = cn(
+    "border-b-[0.5px] text-sm uppercase placeholder:capitalize tracking-widest placeholder-white/40 focus:placeholder-white/0 placeholder:font-heading placeholder:text-sm bg-transparent focus-visible:outline-none resize-none",
+    "h-[140px] border-t-[0.5px] font-heading placeholder:font-body placeholder:text-lg placeholder:italic"
+  );
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
+        data-netlify="true"
         className="grid grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-7"
       >
         <FormField
@@ -111,19 +138,21 @@ export default function ContactForm() {
           render={({ field }) => (
             <FormItem className="col-span-4">
               <FormControl>
-                <Textarea
-                  placeholder="Message"
-                  className={textareaClasses}
-                  {...field}
-                />
+                <div>
+                  <div className="font-heading uppercase text-white/40 tracking-widest mb-2 text-sm">
+                    Message
+                  </div>
+                  <Textarea
+                    placeholder="Write your message here"
+                    className={textareaClasses}
+                    {...field}
+                  />
+                </div>
               </FormControl>
-              <FormMessage />
+              <FormMessage className="text-destructive" />
             </FormItem>
           )}
         />
-
-        <hr className="col-span-4 mt-24" />
-
         <Button
           type="submit"
           className="lg:mt-6 hover:bg-background/20 col-span-2 col-start-2 lg:col-start-1"
