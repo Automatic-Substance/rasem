@@ -45,6 +45,7 @@ export default function ContactForm() {
       fullname: "",
       subjectline: "",
       message: "",
+      email: "",
     },
   });
 
@@ -64,6 +65,7 @@ export default function ContactForm() {
       .then(() => {
         setHasSubmitted(true);
         form.reset({
+          "form-name": "contact",
           fullname: "",
           subjectline: "",
           email: "",
@@ -157,7 +159,7 @@ export default function ContactForm() {
             <FormItem className="col-span-4">
               <FormControl>
                 <div>
-                  <div className="font-heading uppercase text-white/40 tracking-widest mb-2 text-sm">
+                  <div className="text-left font-heading uppercase text-white/40 tracking-widest mb-2 text-sm">
                     Message
                   </div>
                   <Textarea
@@ -178,7 +180,7 @@ export default function ContactForm() {
         )}
         <Button
           type="submit"
-          className="lg:mt-6 hover:bg-background/20 col-span-2 col-start-2 lg:col-start-1"
+          className="lg:mt-6 hover:bg-background/20 col-span-2 col-start-2 lg:col-start-1 mb-8"
         >
           Submit
         </Button>
