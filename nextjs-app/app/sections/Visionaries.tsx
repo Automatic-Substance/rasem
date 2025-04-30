@@ -103,8 +103,8 @@ export default function Visioniaries(props: VisioniariesProps) {
           Our Partners
         </h2>
         <div className="grid grid-col-1 lg:grid-cols-4 gap-14">
-          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
-            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+          <div className="flex flex-col items-center gap-4 lg:gap-10 xl:gap-14 text-center">
+            <h3 className="text-lg lg:text-2xl xl:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
               <span className="hidden lg:block">
                 SAFI
                 <br />
@@ -122,8 +122,8 @@ export default function Visioniaries(props: VisioniariesProps) {
               better future.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
-            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+          <div className="flex flex-col items-center gap-4 lg:gap-10 xl:gap-14 text-center">
+            <h3 className="text-lg lg:text-2xl xl:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
               <span className="hidden lg:block">
                 ELLIOTT
                 <br />
@@ -140,8 +140,8 @@ export default function Visioniaries(props: VisioniariesProps) {
               financial environments.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
-            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+          <div className="flex flex-col items-center gap-4 lg:gap-10 xl:gap-14 text-center">
+            <h3 className="text-lg lg:text-2xl xl:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
               <span className="hidden lg:block">
                 REGINE
                 <br />
@@ -157,8 +157,8 @@ export default function Visioniaries(props: VisioniariesProps) {
               — translating cultural influence into long-term relevance.
             </p>
           </div>
-          <div className="flex flex-col items-center gap-4 lg:gap-14 text-center">
-            <h3 className="text-lg lg:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
+          <div className="flex flex-col items-center gap-4 lg:gap-10 xl:gap-14 text-center">
+            <h3 className="text-lg lg:text-2xl xl:text-3xl font-heading uppercase tracking-widest mb-2 text-center">
               <span className="hidden lg:block">
                 SHARENA
                 <br />
