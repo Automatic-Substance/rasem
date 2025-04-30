@@ -76,6 +76,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     }
+
+    input[aria-invalid="true"],
+    button[aria-invalid="true"] {
+      border-color: hsl(var(--destructive));
+    }
 }
 
 textarea,
