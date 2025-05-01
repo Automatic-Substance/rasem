@@ -105,7 +105,7 @@ export default function Visioniaries(props: VisioniariesProps) {
       </StaggerIn>
       <StaggerIn className="relative px-5 lg:px-12 overflow-hidden mt-20 lg:mt-28 mb-28 lg:mb-32 cursor-grab [&]:active:cursor-grabbing max-w-[1800px] m-auto">
         <h2 className="uppercase text-[10px] lg:text-base font-heading text-center mb-16 lg:mb-24 tracking-widest">
-          Our Partners
+          Our Team
         </h2>
         <div className="grid grid-col-1 lg:grid-cols-4 gap-14">
           <div className="flex flex-col items-center gap-4 lg:gap-10 xl:gap-14 text-center">
