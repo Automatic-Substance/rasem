@@ -59,7 +59,7 @@ export default function EndStatement(props: EndStatementProps) {
           className="lg:hidden"
           objectFit="cover"
           fill
-          src={BigImage}
+          src={MobileImage}
           alt="Hero Image"
         />
       </motion.div>

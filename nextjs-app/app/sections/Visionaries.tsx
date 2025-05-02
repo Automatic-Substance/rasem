@@ -172,12 +172,13 @@ export default function Visioniaries(props: VisioniariesProps) {
               <span className="lg:hidden">SHARENA HABR</span>
             </h3>
             <p className="lg:text-lg">
-              With over 15 years of experience, Sharena is a seasoned executive
-              with a broad background in operations, organisational design, and
-              strategic leadership. Her leadership is defined by a collaborative
-              and results-driven approach, and she has collaborated with
-              organizations such as Dubai South, Keturah, Al Qana and its
-              subsidiaries, and The National Aquarium.
+              With more than 15 years of experience, Sharena is a dynamic and
+              accomplished executive known for her expertise in operations,
+              organizational design, and strategic leadership. Renowned for her
+              collaborative spirit and results-oriented mindset, she has played
+              a pivotal role in driving impact across leading organizations,
+              including Dubai South, Keturah, Al Qana and its subsidiaries, and
+              The National Aquarium.
             </p>
           </div>
         </div>
