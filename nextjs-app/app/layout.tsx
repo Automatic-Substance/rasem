@@ -69,7 +69,7 @@ const ebgaramond = EB_Garamond({
 });
 
 const gotham = localFont({
-  src: "./fonts/Gotham-Book.otf",
+  src: "./fonts/font.woff2",
   variable: "--font-gotham",
   weight: "400",
 });
