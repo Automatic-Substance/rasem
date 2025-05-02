@@ -33,7 +33,7 @@ export default function Hero(props: HeroProps) {
       <motion.div className="absolute size-full" style={{ y, opacity }}>
         <Image
           className="object-[10%_50%] lg:object-center"
-          sizes="100vw"
+          sizes="1200px"
           objectFit="cover"
           fill
           src={HeroImage}

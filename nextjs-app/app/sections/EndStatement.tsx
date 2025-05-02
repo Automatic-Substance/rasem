@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import MobileImage from "@/app/assets/images/ClosingImage+Tagline_Portrait.jpg";
+import MobileImage from "@/app/assets/images/ClosingImage+Tagline_Portrait2.jpg";
 import BigImage from "@/app/assets/images/ClosingImage+Tagline_Landscape.jpg";
 import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import { useRef } from "react";
@@ -22,7 +22,7 @@ export default function EndStatement(props: EndStatementProps) {
   return (
     <div
       ref={ref}
-      className="relative h-svh bg-primary-background overflow-hidden z-30"
+      className="relative aspect-[0.64] lg:aspect-auto lg:h-svh bg-primary-background overflow-hidden z-30"
     >
       <div className="z-10 relative size-full text-primary flex items-center justify-center px-5">
         <motion.div
@@ -47,7 +47,7 @@ export default function EndStatement(props: EndStatementProps) {
         style={{ y, opacity, scale }}
       >
         <Image
-          sizes="100vw"
+          sizes="1400px"
           className="hidden lg:block"
           objectFit="cover"
           fill
@@ -55,7 +55,7 @@ export default function EndStatement(props: EndStatementProps) {
           alt="Hero Image"
         />
         <Image
-          sizes="100vw"
+          sizes="(max-width: 1024px) 600px, 1200px"
           className="lg:hidden"
           objectFit="cover"
           fill
