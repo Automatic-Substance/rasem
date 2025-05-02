@@ -30,7 +30,8 @@ export async function generateMetadata(): Promise<Metadata> {
     stega: false,
   });
   const title = settings?.title || demo.title;
-  const description = settings?.description || demo.description;
+  const description =
+    "To live lifeophilic is to embrace that a life well lived is not defined by longevity alone but by a commitment to fullness, purpose, and impact. For those who seek not more time, but more from time, this pursuit becomes mastery: where vitality shapes the canvas, and life becomes the masterpiece. Here, time is not simply spent—it is reclaimed, reshaped, and commanded.";
 
   const ogImage = resolveOpenGraphImage(settings?.ogImage);
   let metadataBase: URL | undefined = undefined;
@@ -47,7 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${title}`,
       default: title,
     },
-    description: toPlainText(description),
+    description: description,
     openGraph: {
       images: ogImage ? [ogImage] : [],
     },
