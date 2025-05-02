@@ -2,7 +2,7 @@
 
 import Pillar from "@/app/components/Pillar";
 import { useKeenSlider } from "keen-slider/react";
-import SpaceImageOne from "@/app/assets/images/pillar-space-1.png";
+import SpaceImageOne from "@/app/assets/images/pillar-space-11.png";
 import SpaceImageTwo from "@/app/assets/images/pillar-space-2.png";
 import SpaceIcon from "@/app/assets/icons/spaces-graphic.svg";
 import EnvImageOne from "@/app/assets/images/pillar-env-1.webp";
