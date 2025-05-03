@@ -3,13 +3,16 @@
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
+import PortableText from "@/app/components/PortableText";
+import { type PortableTextBlock } from "next-sanity";
+import CoverImage from "./CoverImage";
 
 interface PillarProps {
   title: string;
-  description: string;
-  imageOne: StaticImageData;
-  imageTwo: StaticImageData;
-  icon: React.ReactNode;
+  description: any;
+  imageOne: any;
+  imageTwo: any;
+  icon: any;
 }
 
 export default function Pillar({
@@ -28,31 +31,21 @@ export default function Pillar({
             variants={animation}
             className="relative aspect-[.82] w-2/5"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={imageOne}
-              alt="Hero Image"
-            />
+            <CoverImage image={imageOne} />
           </motion.div>
           <motion.div
             variants={animation}
             className="relative aspect-[.814] flex-1"
           >
             {" "}
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={imageTwo}
-              alt="Hero Image"
-            />
+            <CoverImage image={imageTwo} />
           </motion.div>
         </div>
         <div className="space-y-14 mx-10">
-          <motion.div className="h-[200px]" variants={animation}>
-            {icon}
+          <motion.div variants={animation}>
+            <div className="relative w-[120px] h-[200px]">
+              <CoverImage image={icon} className="[&]:object-contain" />
+            </div>
           </motion.div>
           <div className="space-y-4">
             <motion.h3
@@ -67,27 +60,30 @@ export default function Pillar({
             >
               {title}
             </motion.h2>
-            <motion.p variants={animation} className="text-base">
-              {description}
-            </motion.p>
+            <motion.div variants={animation} className="text-base">
+              {description?.length && (
+                <PortableText
+                  className="text-base"
+                  value={description as PortableTextBlock[]}
+                />
+              )}
+            </motion.div>
           </div>
         </div>
       </StaggerIn>
       <StaggerIn className="relative w-full hidden lg:flex" {...props}>
         <div className="w-1/2 pl-24 pr-12 flex items-start">
           <div className="flex justify-between items-end w-full">
-            <motion.div variants={animation}>{icon}</motion.div>
+            <motion.div variants={animation}>
+              <div className="relative w-[140px] aspect-[.82]">
+                <CoverImage image={icon} className="[&]:object-contain" />
+              </div>
+            </motion.div>
             <motion.div
               variants={animation}
               className="relative aspect-[.82] w-2/4"
             >
-              <Image
-                sizes="100vw"
-                objectFit="cover"
-                fill
-                src={imageOne}
-                alt="Hero Image"
-              />
+              <CoverImage image={imageOne} />
             </motion.div>
           </div>
         </div>
@@ -97,13 +93,7 @@ export default function Pillar({
             className="relative aspect-[.814] w-full"
           >
             {" "}
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={imageTwo}
-              alt="Hero Image"
-            />
+            <CoverImage image={imageTwo} />
           </motion.div>
         </div>
         <div className="absolute left-0 bottom-0 h-1/2 w-2/5 min-[1900px]:w-1/4 pl-24 space-y-10">
@@ -119,9 +109,14 @@ export default function Pillar({
           >
             {title}
           </motion.h2>
-          <motion.p variants={animation} className="text-base xl:text-xl">
-            {description}
-          </motion.p>
+          <motion.div variants={animation}>
+            {description?.length && (
+              <PortableText
+                className="text-base xl:text-xl"
+                value={description as PortableTextBlock[]}
+              />
+            )}
+          </motion.div>
         </div>
       </StaggerIn>
     </>

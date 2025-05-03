@@ -16,28 +16,38 @@ export default async function Page() {
     query: homeQuery,
   });
 
-  console.log(home);
   return (
     <>
       <div className="relative">
         <Hero image={home.hero.heroImage} />
       </div>
       <CollectiveVision
+        headingOne={home.collectiveVision.headingOne}
+        headingTwo={home.collectiveVision.headingTwo}
         imageOne={home.collectiveVision.imageOne}
         imageTwo={home.collectiveVision.imageTwo}
       />
       <OurPhilosophy
+        heading={home.ourPhilosophy.heading}
+        description={home.ourPhilosophy.description}
         imageLarge={home.ourPhilosophy.imageLarge}
         imageOne={home.ourPhilosophy.imageOne}
         imageTwo={home.ourPhilosophy.imageTwo}
       />
       <Banner image={home.imageBanner} />
       <OurVision
+        heading={home.ourVision.heading}
+        description={home.ourVision.description}
         imageOne={home.ourVision.imageOne}
         imageTwo={home.ourVision.imageTwo}
       />
-      <Visioniaries image={home.visionaries.imageOne} />
-      <Pillars />
+      <Visioniaries
+        heading={home.visionaries.heading}
+        description={home.visionaries.description}
+        image={home.visionaries.imageOne}
+        team={home.visionaries.team}
+      />
+      <Pillars pillars={home.pillars} />
       <EndStatement
         imageDesktop={home.endStatement.imageDesktop}
         imageMobile={home.endStatement.imageMobile}

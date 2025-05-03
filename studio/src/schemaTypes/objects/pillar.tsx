@@ -13,6 +13,16 @@ export const pillar = defineType({
   icon: BulbOutlineIcon,
   fields: [
     defineField({
+      name: 'heading',
+      title: 'Heading',
+      type: 'string',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'graphic',
       title: 'Graphic',
       type: 'imageBlock',

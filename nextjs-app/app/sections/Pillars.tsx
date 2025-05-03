@@ -23,60 +23,19 @@ import ChevronIcon from "@/app/assets/icons/chevron.svg";
 
 import React, { useState } from "react";
 
-interface PillarsProps {}
+interface PillarsProps {
+  pillars?: any;
+}
 
-export default function Pillars(props: PillarsProps) {
+export default function Pillars({ pillars, ...props }: PillarsProps) {
   const [opacities, setOpacities] = useState<number[]>([]);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [loaded, setLoaded] = useState<boolean>(false);
 
-  const slides = [
-    {
-      title: "Spaces",
-      description:
-        "With both form and function in mind, spaces can be as much a sanctuary, as they are stimulus for inspiration. To live with greater intention, we must reshape our perspective, and perspective begins with our surroundings. ",
-      icon: <SpaceIcon />,
-      imageOne: SpaceImageOne,
-      imageTwo: SpaceImageTwo,
-    },
-    {
-      title: "Environment",
-      description:
-        "The world we shape, we shape for generations to come. To sustain progress, we create with purpose– choosing environments that awaken presence and spark connection, while transforming them for the better without compromising the surrounding ecosystem.",
-      icon: <EnvironmentIcon />,
-      imageOne: EnvImageOne,
-      imageTwo: EnvImageTwo,
-    },
-    {
-      title: "Wellness",
-      description:
-        "The mastery of time and life requires the mastery of mind and body. Our blend of ancient wisdom and cutting-edge science designs lifestyles that heal, transform, and enhance, ultimately elevating vitality. ",
-      icon: <WellnessIcon />,
-      imageOne: WellnessImageOne,
-      imageTwo: WellnessImageTwo,
-    },
-    {
-      title: "Technology",
-      description:
-        "A catalyst of advancements– through partnerships with exceptional brands and extraordinary people, we pioneer solutions that disrupt what is possible ​with the human body, longevity, and the way we live. ​",
-      icon: <TechIcon />,
-      imageOne: TechImageOne,
-      imageTwo: TechImageTwo,
-    },
-    {
-      title: "People",
-      description:
-        "From design to technology, everything begins with those who embark on this journey and a shared commitment to values that uplift and support. It is through kindness, empathy, and collaboration that we find the wisdom to guide together",
-      icon: <PeopleIcon />,
-      imageOne: PeopleImageOne,
-      imageTwo: PeopleImageTwo,
-    },
-  ];
-
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     loop: false,
-    slides: slides.length,
+    slides: pillars.length,
     created() {
       setLoaded(true);
     },
@@ -102,21 +61,22 @@ export default function Pillars(props: PillarsProps) {
           className="relative overflow-hidden grid"
           {...props}
         >
-          {slides.map((slide, idx) => (
-            <div
-              key={idx}
-              className="[grid-area:1/1]"
-              style={{ opacity: opacities[idx] }}
-            >
-              <Pillar
-                title={slide.title}
-                description={slide.description}
-                icon={slide.icon}
-                imageOne={slide.imageOne}
-                imageTwo={slide.imageTwo}
-              />
-            </div>
-          ))}
+          {pillars &&
+            pillars.map((pillar: any, idx: number) => (
+              <div
+                key={idx}
+                className="[grid-area:1/1]"
+                style={{ opacity: opacities[idx] }}
+              >
+                <Pillar
+                  title={pillar.heading}
+                  description={pillar.description}
+                  icon={pillar.graphic}
+                  imageOne={pillar.imageOne}
+                  imageTwo={pillar.imageTwo}
+                />
+              </div>
+            ))}
         </div>
         {loaded && instanceRef.current && (
           <div className="absolute pl-10 pr-10 w-full lg:pl-24 lg:pr-12 lg:w-1/2 -bottom-16 lg:bottom-8 xl:bottom-24 min-[1900px]:bottom-72 flex justify-between">
@@ -128,7 +88,7 @@ export default function Pillars(props: PillarsProps) {
             </div>
             <div
               className={cn(navClasses, {
-                "opacity-0": currentSlide === slides.length - 1,
+                "opacity-0": currentSlide === pillars.length - 1,
               })}
               onClick={() => instanceRef.current?.next()}
             >

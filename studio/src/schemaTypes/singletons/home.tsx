@@ -52,6 +52,11 @@ export const home = defineType({
       title: 'End Statement',
       type: 'endStatement',
     }),
+    defineField({
+      name: 'footer',
+      title: 'Footer',
+      type: 'footer',
+    }),
   ],
   preview: {
     prepare() {

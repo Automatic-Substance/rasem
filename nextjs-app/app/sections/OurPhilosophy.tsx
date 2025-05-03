@@ -1,23 +1,25 @@
 "use client";
 
-import Image from "next/image";
 import CoverImage from "@/app/components/CoverImage";
-import ImageOne from "@/app/assets/images/ourphilosophy-1.png";
-import ImageTwo from "@/app/assets/images/ourphilosophy-2.png";
-import ImageThree from "@/app/assets/images/ourphilosophy-3.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
+import PortableText from "@/app/components/PortableText";
+import { type PortableTextBlock } from "next-sanity";
 
 interface OurPhilosophyProps {
   imageLarge: any;
   imageOne: any;
   imageTwo: any;
+  heading: any;
+  description: any;
 }
 
 export default function OurPhilosophy({
   imageOne,
   imageTwo,
   imageLarge,
+  heading,
+  description,
   ...props
 }: OurPhilosophyProps) {
   return (
@@ -30,13 +32,14 @@ export default function OurPhilosophy({
           >
             Our Philosophy
           </motion.h2>
-          <motion.p
-            variants={animation}
-            className="text-2xl/[1.25] w-full text-right"
-          >
-            A preface to <span className="italic">Lifeophilic:</span> Reshape
-            life by reclaiming time.
-          </motion.p>
+          <motion.div variants={animation} className="w-full text-right">
+            {heading?.length && (
+              <PortableText
+                className="text-2xl/[1.25]"
+                value={heading as PortableTextBlock[]}
+              />
+            )}
+          </motion.div>
         </div>
         <div className="w-full aspect-[1.29] relative">
           <motion.div
@@ -47,15 +50,14 @@ export default function OurPhilosophy({
           </motion.div>
         </div>
         <div className="items-center px-10 my-12">
-          <motion.p variants={animation}>
-            To live <span className="italic">lifeophilic</span> is to embrace
-            that a life well lived is not defined by longevity alone but by a
-            commitment to fullness, purpose, and impact. For those who seek not
-            more time, but more <span className="italic">from</span> time, this
-            pursuit becomes mastery: where vitality shapes the canvas, and life
-            becomes the masterpiece. Here, time is not simply spent—it is
-            reclaimed, reshaped, and commanded.
-          </motion.p>
+          <motion.div variants={animation}>
+            {description?.length && (
+              <PortableText
+                className=""
+                value={description as PortableTextBlock[]}
+              />
+            )}
+          </motion.div>
         </div>
         <div className="flex gap-10 px-5">
           <motion.div
@@ -85,13 +87,14 @@ export default function OurPhilosophy({
               >
                 Our Philosophy
               </motion.h2>
-              <motion.p
-                variants={animation}
-                className="text-3xl/[1.16] xl:text-5xl/[1.16] w-4/6 text-right"
-              >
-                A preface to <span className="italic">Lifeophilic:</span>{" "}
-                Reshape life by reclaiming time.
-              </motion.p>
+              <motion.div variants={animation} className="w-4/6 text-right">
+                {heading?.length && (
+                  <PortableText
+                    className="text-3xl/[1.16] xl:text-5xl/[1.16]"
+                    value={heading as PortableTextBlock[]}
+                  />
+                )}
+              </motion.div>
             </div>
             <div className="col-span-5">
               <motion.div
@@ -116,17 +119,15 @@ export default function OurPhilosophy({
                 <CoverImage image={imageTwo} />
               </div>
             </motion.div>
-            <div className="col-span-4 2xl:col-span-3 flex items-center px-12 text-base xl:text-lg">
-              <motion.p variants={animation}>
-                To live <span className="italic">lifeophilic</span> is to
-                embrace that a life well lived is not defined by longevity alone
-                but by a commitment to fullness, purpose, and impact. For those
-                who seek not more time, but more{" "}
-                <span className="italic">from</span> time, this pursuit becomes
-                mastery: where vitality shapes the canvas, and life becomes the
-                masterpiece. Here, time is not simply spent—it is reclaimed,
-                reshaped, and commanded.
-              </motion.p>
+            <div className="col-span-4 2xl:col-span-3 flex items-center px-12">
+              <motion.div variants={animation}>
+                {description?.length && (
+                  <PortableText
+                    className="text-base xl:text-lg"
+                    value={description as PortableTextBlock[]}
+                  />
+                )}
+              </motion.div>
             </div>
           </div>
         </StaggerIn>

@@ -14,7 +14,7 @@ import Footer from "@/app/components/Footer";
 import Header from "@/app/components/Header";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
-import { settingsQuery } from "@/sanity/lib/queries";
+import { settingsQuery, homeQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { handleError } from "./client-utils";
 import SmoothScroll from "@/app//components/SmoothScroll";
@@ -29,6 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Metadata should never contain stega
     stega: false,
   });
+
   const title = settings?.title || demo.title;
   const description =
     "To live lifeophilic is to embrace that a life well lived is not defined by longevity alone but by a commitment to fullness, purpose, and impact. For those who seek not more time, but more from time, this pursuit becomes mastery: where vitality shapes the canvas, and life becomes the masterpiece. Here, time is not simply spent—it is reclaimed, reshaped, and commanded.";
@@ -81,6 +82,10 @@ export default async function RootLayout({
 }) {
   const { isEnabled: isDraftMode } = await draftMode();
 
+  const { data: home } = await sanityFetch({
+    query: homeQuery,
+  });
+
   return (
     <html
       lang="en"
@@ -102,7 +107,10 @@ export default async function RootLayout({
             <SanityLive onError={handleError} />
             <Header />
             <main className="">{children}</main>
-            <Footer />
+            <Footer
+              description={home.footer.description}
+              contactdescription={home.footer.contactdescription}
+            />
           </section>
           <SpeedInsights />
         </SmoothScroll>

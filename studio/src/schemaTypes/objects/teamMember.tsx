@@ -6,36 +6,26 @@ import {BulbOutlineIcon} from '@sanity/icons'
  * Learn more: https://www.sanity.io/docs/object-type
  */
 
-export const visionaries = defineType({
-  name: 'visionaries',
-  title: 'Visionaries',
+export const teamMember = defineType({
+  name: 'teamMember',
+  title: 'Member',
   type: 'object',
   icon: BulbOutlineIcon,
   fields: [
     defineField({
-      name: 'heading',
-      title: 'Heading',
-      type: 'blockContent',
+      name: 'firstname',
+      title: 'First Name',
+      type: 'string',
+    }),
+    defineField({
+      name: 'lastname',
+      title: 'Last Name',
+      type: 'string',
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'blockContent',
-    }),
-    defineField({
-      name: 'imageOne',
-      title: 'Image One',
-      type: 'imageBlock',
-    }),
-    defineField({
-      name: 'team',
-      title: 'Team',
-      type: 'array',
-      of: [
-        {
-          type: 'teamMember',
-        },
-      ],
     }),
   ],
 })

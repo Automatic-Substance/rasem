@@ -13,6 +13,16 @@ export const collectiveVision = defineType({
   icon: BulbOutlineIcon,
   fields: [
     defineField({
+      name: 'headingOne',
+      title: 'Heading One',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'headingTwo',
+      title: 'Heading Two',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'imageOne',
       title: 'Image One',
       type: 'imageBlock',

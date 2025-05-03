@@ -1,20 +1,23 @@
 "use client";
 
-import Image from "next/image";
-import OurVisionImageOne from "@/app/assets/images/ourvision-1.webp";
-import OurVisionImageTwo from "@/app/assets/images/ourvision-2.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
 import CoverImage from "@/app/components/CoverImage";
+import PortableText from "@/app/components/PortableText";
+import { type PortableTextBlock } from "next-sanity";
 
 interface OurVisionProps {
   imageOne: any;
   imageTwo: any;
+  heading: any;
+  description: any;
 }
 
 export default function OurVision({
   imageOne,
   imageTwo,
+  heading,
+  description,
   ...props
 }: OurVisionProps) {
   return (
@@ -37,23 +40,23 @@ export default function OurVision({
             >
               OUR VISION
             </motion.h2>
-            <motion.p variants={animation} className="text-2xl/[1.25] w-5/6">
-              Architects of mastery: The new benchmark in{" "}
-              <span className="italic">wellness real-estate.</span>
-            </motion.p>
+            <motion.div variants={animation} className="w-5/6">
+              {heading?.length && (
+                <PortableText
+                  className="text-2xl/[1.25]"
+                  value={heading as PortableTextBlock[]}
+                />
+              )}
+            </motion.div>
           </div>
-          <motion.p variants={animation} className="text-base w-full">
-            RASEM masters life through three lenses:{" "}
-            <span className="italic font-semibold">
-              real estate investment, wellness, and innovation.
-            </span>{" "}
-            From spaces that shift perspective, experiences that enhance
-            vitality, and ventures that shape the future, each discipline
-            reinforces the next—forming a seamless ecosystem for a{" "}
-            <span className="italic">lifeophilic</span> way of life. Together,
-            they create destinations where time can be extended and spent more
-            meaningfully, advancing longevity into legacy.
-          </motion.p>
+          <motion.div variants={animation} className="w-full">
+            {description?.length && (
+              <PortableText
+                className="text-base"
+                value={description as PortableTextBlock[]}
+              />
+            )}
+          </motion.div>
           <motion.div
             variants={animation}
             className="aspect-[.68] relative w-4/6"
@@ -76,13 +79,14 @@ export default function OurVision({
                 >
                   OUR VISION
                 </motion.h2>
-                <motion.p
-                  variants={animation}
-                  className="text-3xl/[1.16] xl:text-5xl/[1.16] w-5/6"
-                >
-                  Architects of mastery: The new benchmark in{" "}
-                  <span className="italic">wellness real-estate.</span>
-                </motion.p>
+                <motion.div variants={animation} className="w-5/6">
+                  {heading?.length && (
+                    <PortableText
+                      className="text-3xl/[1.16] xl:text-5xl/[1.16]"
+                      value={heading as PortableTextBlock[]}
+                    />
+                  )}
+                </motion.div>
               </div>
               <motion.div
                 variants={animation}
@@ -92,21 +96,14 @@ export default function OurVision({
               </motion.div>
             </div>
             <div className="col-span-5 flex items-center">
-              <motion.p
-                variants={animation}
-                className="text-base xl:text-lg w-4/5 2xl:w-3/5"
-              >
-                RASEM masters life through three lenses:{" "}
-                <span className="italic font-semibold">
-                  real estate investment, wellness, and innovation.
-                </span>{" "}
-                From spaces that shift perspective, experiences that enhance
-                vitality, and ventures that shape the future, each discipline
-                reinforces the next—forming a seamless ecosystem for a{" "}
-                <span className="italic">lifeophilic</span> way of life.
-                Together, they create destinations where time can be extended
-                and spent more meaningfully, advancing longevity into legacy.
-              </motion.p>
+              <motion.div variants={animation} className="w-4/5 2xl:w-3/5">
+                {description?.length && (
+                  <PortableText
+                    className="text-base xl:text-lg"
+                    value={description as PortableTextBlock[]}
+                  />
+                )}
+              </motion.div>
             </div>
           </div>
           <div className="col-start-6 col-span-4">

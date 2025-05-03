@@ -13,6 +13,16 @@ export const ourPhilosophy = defineType({
   icon: BulbOutlineIcon,
   fields: [
     defineField({
+      name: 'heading',
+      title: 'Heading',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'imageLarge',
       title: 'Image Large',
       type: 'imageBlock',
