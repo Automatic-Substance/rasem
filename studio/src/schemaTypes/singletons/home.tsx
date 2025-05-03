@@ -42,6 +42,11 @@ export const home = defineType({
       title: 'Visionaries',
       type: 'visionaries',
     }),
+    defineField({
+      name: 'pillars',
+      title: 'Pillars',
+      type: 'pillars',
+    }),
   ],
   preview: {
     prepare() {
