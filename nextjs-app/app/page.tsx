@@ -11,8 +11,6 @@ import Banner from "@/app/sections/Banner";
 import { sanityFetch } from "@/sanity/lib/live";
 import { homeQuery } from "@/sanity/lib/queries";
 
-import { AllPosts } from "@/app/components/Posts";
-
 export default async function Page() {
   const { data: home } = await sanityFetch({
     query: homeQuery,
@@ -28,7 +26,11 @@ export default async function Page() {
         imageOne={home.collectiveVision.imageOne}
         imageTwo={home.collectiveVision.imageTwo}
       />
-      <OurPhilosophy />
+      <OurPhilosophy
+        imageLarge={home.ourPhilosophy.imageLarge}
+        imageOne={home.ourPhilosophy.imageOne}
+        imageTwo={home.ourPhilosophy.imageTwo}
+      />
       <Banner />
       <OurVision />
       <Visioniaries />

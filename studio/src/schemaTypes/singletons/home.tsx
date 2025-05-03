@@ -22,6 +22,11 @@ export const home = defineType({
       title: 'Collective Vision',
       type: 'collectiveVision',
     }),
+    defineField({
+      name: 'ourPhilosophy',
+      title: 'Our Philosophy',
+      type: 'ourPhilosophy',
+    }),
   ],
   preview: {
     prepare() {

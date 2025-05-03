@@ -1,15 +1,25 @@
 "use client";
 
 import Image from "next/image";
+import CoverImage from "@/app/components/CoverImage";
 import ImageOne from "@/app/assets/images/ourphilosophy-1.png";
 import ImageTwo from "@/app/assets/images/ourphilosophy-2.png";
 import ImageThree from "@/app/assets/images/ourphilosophy-3.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
 
-interface OurPhilosophyProps {}
+interface OurPhilosophyProps {
+  imageLarge: any;
+  imageOne: any;
+  imageTwo: any;
+}
 
-export default function OurPhilosophy(props: OurPhilosophyProps) {
+export default function OurPhilosophy({
+  imageOne,
+  imageTwo,
+  imageLarge,
+  ...props
+}: OurPhilosophyProps) {
   return (
     <>
       <StaggerIn className="lg:hidden relative pt-24 pb-20 px-5 bg-white">
@@ -33,13 +43,7 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             variants={animation}
             className="relative h-full w-[calc(100%-20px)] -left-[20px]"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={ImageOne}
-              alt="A tree at sunset"
-            />
+            <CoverImage image={imageLarge} />
           </motion.div>
         </div>
         <div className="items-center px-10 my-12">
@@ -58,25 +62,13 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
             variants={animation}
             className="flex-1 aspect-[.67] relative"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={ImageTwo}
-              alt="Two hands"
-            />
+            <CoverImage image={imageOne} />
           </motion.div>
           <motion.div
             variants={animation}
             className="flex-1 aspect-[.67] relative"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={ImageThree}
-              alt="Girl on patio chair overlooking the ocean"
-            />
+            <CoverImage image={imageTwo} />
           </motion.div>
         </div>
       </StaggerIn>
@@ -107,13 +99,7 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
                 className="w-full aspect-[1.29] relative"
               >
                 <div className="relative h-full w-[calc(100%+48px)] -left-[48px]">
-                  <Image
-                    sizes="100vw"
-                    objectFit="cover"
-                    fill
-                    src={ImageOne}
-                    alt="A tree at sunset"
-                  />
+                  <CoverImage image={imageLarge} />
                 </div>
               </motion.div>
             </div>
@@ -124,22 +110,10 @@ export default function OurPhilosophy(props: OurPhilosophyProps) {
               className="col-start-2 col-span-3 flex gap-5 items-start"
             >
               <div className="flex-1 aspect-[.67] relative">
-                <Image
-                  sizes="100vw"
-                  objectFit="cover"
-                  fill
-                  src={ImageTwo}
-                  alt="Two hands"
-                />
+                <CoverImage image={imageOne} />
               </div>
               <div className="flex-1 aspect-[.67] relative">
-                <Image
-                  sizes="100vw"
-                  objectFit="cover"
-                  fill
-                  src={ImageThree}
-                  alt="Girl on patio chair overlooking the ocean"
-                />
+                <CoverImage image={imageTwo} />
               </div>
             </motion.div>
             <div className="col-span-4 2xl:col-span-3 flex items-center px-12 text-base xl:text-lg">
