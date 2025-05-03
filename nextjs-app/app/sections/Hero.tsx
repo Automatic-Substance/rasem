@@ -5,10 +5,13 @@ import HeroImage from "@/app/assets/images/hero_image_2.png";
 import { useCallback, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useLenis } from "lenis/react";
+import CoverImage from "@/app/components/CoverImage";
 
-interface HeroProps {}
+interface HeroProps {
+  image: any;
+}
 
-export default function Hero(props: HeroProps) {
+export default function Hero({ image }: HeroProps) {
   const lenis = useLenis();
 
   const discoverClick = useCallback(() => {
@@ -31,13 +34,9 @@ export default function Hero(props: HeroProps) {
   return (
     <div className="relative min-h-svh bg-primary-background" ref={ref}>
       <motion.div className="absolute size-full" style={{ y, opacity }}>
-        <Image
+        <CoverImage
+          image={image}
           className="object-[10%_50%] lg:object-center"
-          sizes="1200px"
-          objectFit="cover"
-          fill
-          src={HeroImage}
-          alt="Hero Image"
         />
       </motion.div>
 
