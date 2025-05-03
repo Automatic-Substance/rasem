@@ -24,14 +24,10 @@ export default async function Page() {
       <div className="relative">
         <Hero image={home.hero.heroImage} />
       </div>
-      <CollectiveVision />
-      <div className="border-t border-gray-10">
-        <div className="container">
-          <aside className="py-12 sm:py-20">
-            <Suspense>{await AllPosts()}</Suspense>
-          </aside>
-        </div>
-      </div>
+      <CollectiveVision
+        imageOne={home.collectiveVision.imageOne}
+        imageTwo={home.collectiveVision.imageTwo}
+      />
       <OurPhilosophy />
       <Banner />
       <OurVision />

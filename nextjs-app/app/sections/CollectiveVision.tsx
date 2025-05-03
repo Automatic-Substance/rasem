@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import cn from "classnames";
 import Image from "next/image";
+import CoverImage from "@/app/components/CoverImage";
 import ImageOne from "@/app/assets/images/collective-vision-3.webp";
 import ImageTwo from "@/app/assets/images/collective-vision-4.webp";
 import {
@@ -17,9 +18,16 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 
-interface CollectiveVisionProps {}
+interface CollectiveVisionProps {
+  imageOne: any;
+  imageTwo: any;
+}
 
-export default function CollectiveVision(props: CollectiveVisionProps) {
+export default function CollectiveVision({
+  imageOne,
+  imageTwo,
+  ...props
+}: CollectiveVisionProps) {
   const ref = useRef<any>();
   const [whiteText, setWhiteText] = useState<boolean>(false);
 
@@ -54,26 +62,13 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
         <div className="w-full h-screen hidden sticky top-0 px-12 py-12 lg:flex">
           <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
-              <Image
-                sizes="100vw"
-                objectFit="cover"
-                fill
-                src={ImageOne}
-                alt="Beach Image"
-              />
+              <CoverImage image={imageOne} />
             </Parallax>
           </FadeIn>
           <div className="h-full flex-1"></div>
           <FadeIn className="bg-black h-full flex-1 relative" delay={0.4}>
             <Parallax ref={ref}>
-              <Image
-                sizes="100vw"
-                objectPosition="70% 50%"
-                objectFit="cover"
-                fill
-                src={ImageTwo}
-                alt="Fashionable room image"
-              />
+              <CoverImage image={imageTwo} />
             </Parallax>
           </FadeIn>
         </div>
@@ -115,13 +110,7 @@ export default function CollectiveVision(props: CollectiveVisionProps) {
           ref={refMobile}
           className="lg:hidden bg-black h-screen w-full flex-1 relative bottom-0 left-0 z-0"
         >
-          <Image
-            sizes="100vw"
-            objectFit="cover"
-            fill
-            src={ImageOne}
-            alt="Beach Image"
-          />
+          <CoverImage image={imageOne} />
         </div>
       </div>
     </>
