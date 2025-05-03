@@ -32,7 +32,10 @@ export default async function Page() {
         imageTwo={home.ourPhilosophy.imageTwo}
       />
       <Banner image={home.imageBanner} />
-      <OurVision />
+      <OurVision
+        imageOne={home.ourVision.imageOne}
+        imageTwo={home.ourVision.imageTwo}
+      />
       <Visioniaries />
       <Pillars />
       <EndStatement />

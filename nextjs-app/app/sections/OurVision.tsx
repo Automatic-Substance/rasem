@@ -5,10 +5,18 @@ import OurVisionImageOne from "@/app/assets/images/ourvision-1.webp";
 import OurVisionImageTwo from "@/app/assets/images/ourvision-2.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
+import CoverImage from "@/app/components/CoverImage";
 
-interface OurVisionProps {}
+interface OurVisionProps {
+  imageOne: any;
+  imageTwo: any;
+}
 
-export default function OurVision(props: OurVisionProps) {
+export default function OurVision({
+  imageOne,
+  imageTwo,
+  ...props
+}: OurVisionProps) {
   return (
     <>
       <StaggerIn
@@ -20,13 +28,7 @@ export default function OurVision(props: OurVisionProps) {
             variants={animation}
             className="w-full aspect-[.82] relative"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={OurVisionImageTwo}
-              alt="Bedroom overlooking dubai Image"
-            />
+            <CoverImage image={imageTwo} />
           </motion.div>
           <div className="flex flex-col gap-5 justify-center items-center">
             <motion.h2
@@ -56,13 +58,7 @@ export default function OurVision(props: OurVisionProps) {
             variants={animation}
             className="aspect-[.68] relative w-4/6"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={OurVisionImageOne}
-              alt="Canyon Image"
-            />
+            <CoverImage image={imageOne} />
           </motion.div>
         </div>
       </StaggerIn>
@@ -92,13 +88,7 @@ export default function OurVision(props: OurVisionProps) {
                 variants={animation}
                 className="col-span-2 aspect-[.75] relative"
               >
-                <Image
-                  sizes="100vw"
-                  objectFit="cover"
-                  fill
-                  src={OurVisionImageOne}
-                  alt="Canyon Image"
-                />
+                <CoverImage image={imageOne} />
               </motion.div>
             </div>
             <div className="col-span-5 flex items-center">
@@ -125,13 +115,7 @@ export default function OurVision(props: OurVisionProps) {
                 variants={animation}
                 className="relative h-full w-[calc(100%+48px)]"
               >
-                <Image
-                  sizes="100vw"
-                  objectFit="cover"
-                  fill
-                  src={OurVisionImageTwo}
-                  alt="Canyon Image"
-                />
+                <CoverImage image={imageTwo} />
               </motion.div>
             </div>
           </div>
