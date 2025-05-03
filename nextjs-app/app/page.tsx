@@ -38,7 +38,10 @@ export default async function Page() {
       />
       <Visioniaries image={home.visionaries.imageOne} />
       <Pillars />
-      <EndStatement />
+      <EndStatement
+        imageDesktop={home.endStatement.imageDesktop}
+        imageMobile={home.endStatement.imageMobile}
+      />
     </>
   );
 }

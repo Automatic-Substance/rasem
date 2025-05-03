@@ -1,14 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import MobileImage from "@/app/assets/images/ClosingImage+Tagline_Portrait2.jpg";
-import BigImage from "@/app/assets/images/ClosingImage+Tagline_Landscape.jpg";
+import CoverImage from "@/app/components/CoverImage";
+
 import { motion, useScroll, useTransform, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 
-interface EndStatementProps {}
+interface EndStatementProps {
+  imageDesktop: any;
+  imageMobile: any;
+}
 
-export default function EndStatement(props: EndStatementProps) {
+export default function EndStatement({
+  imageDesktop,
+  imageMobile,
+  ...props
+}: EndStatementProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -46,21 +53,15 @@ export default function EndStatement(props: EndStatementProps) {
         className="absolute size-full z-0 top-0 left-0 scale-125"
         style={{ y, opacity, scale }}
       >
-        <Image
-          sizes="1400px"
+        <CoverImage
+          image={imageDesktop}
           className="hidden lg:block"
-          objectFit="cover"
-          fill
-          src={BigImage}
-          alt="Hero Image"
+          sizes="1400px"
         />
-        <Image
+        <CoverImage
+          image={imageMobile}
           sizes="(max-width: 1024px) 600px, 1200px"
           className="lg:hidden"
-          objectFit="cover"
-          fill
-          src={MobileImage}
-          alt="Hero Image"
         />
       </motion.div>
     </div>

@@ -47,6 +47,11 @@ export const home = defineType({
       title: 'Pillars',
       type: 'pillars',
     }),
+    defineField({
+      name: 'endStatement',
+      title: 'End Statement',
+      type: 'endStatement',
+    }),
   ],
   preview: {
     prepare() {
