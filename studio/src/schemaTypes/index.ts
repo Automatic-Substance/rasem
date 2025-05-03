@@ -12,6 +12,7 @@ import {collectiveVision} from './objects/collectiveVision'
 import {hero} from './objects/hero'
 import {ourPhilosophy} from './objects/ourPhilosophy'
 import {ourVision} from './objects/ourVision'
+import {visionaries} from './objects/visionaries'
 
 // Export an array of all the schema types.  This is used in the Sanity Studio configuration. https://www.sanity.io/docs/schema-types
 
@@ -33,4 +34,5 @@ export const schemaTypes = [
   collectiveVision,
   ourPhilosophy,
   ourVision,
+  visionaries,
 ]

@@ -5,12 +5,15 @@ import Image from "next/image";
 import GladeImage from "@/app/assets/images/glade.webp";
 import { motion } from "framer-motion";
 import { StaggerIn, animation } from "@/app/components/Animation";
+import CoverImage from "@/app/components/CoverImage";
 
-interface VisioniariesProps {}
+interface VisioniariesProps {
+  image: any;
+}
 
-export default function Visioniaries(props: VisioniariesProps) {
+export default function Visioniaries({ image, ...props }: VisioniariesProps) {
   return (
-    <div className="bg-background">
+    <div className="bg-background" {...props}>
       <StaggerIn className="lg:hidden mx-10 mt-16">
         <div className="flex flex-col gap-8 items-center">
           <motion.h2 variants={animation} className="text-3xl leading-[1.4]">
@@ -32,13 +35,7 @@ export default function Visioniaries(props: VisioniariesProps) {
             variants={animation}
             className="w-full aspect-[.672] relative"
           >
-            <Image
-              sizes="100vw"
-              objectFit="cover"
-              fill
-              src={GladeImage}
-              alt="Glade Image"
-            />
+            <CoverImage image={image} />
           </motion.div>
           <div className="text-base relative mt-3 space-y-5 text-center">
             <motion.p variants={animation}>
@@ -59,13 +56,7 @@ export default function Visioniaries(props: VisioniariesProps) {
           variants={animation}
           className="col-span-4 aspect-[.744] relative"
         >
-          <Image
-            sizes="100vw"
-            objectFit="cover"
-            fill
-            src={GladeImage}
-            alt="Glade Image"
-          />
+          <CoverImage image={image} />
         </motion.div>
         <div className="col-span-5 px-10 flex items-center">
           <div className="flex flex-col gap-14 items-start">

@@ -36,7 +36,7 @@ export default async function Page() {
         imageOne={home.ourVision.imageOne}
         imageTwo={home.ourVision.imageTwo}
       />
-      <Visioniaries />
+      <Visioniaries image={home.visionaries.imageOne} />
       <Pillars />
       <EndStatement />
     </>
