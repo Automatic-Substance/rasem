@@ -27,6 +27,11 @@ export const home = defineType({
       title: 'Our Philosophy',
       type: 'ourPhilosophy',
     }),
+    defineField({
+      name: 'imageBanner',
+      title: 'Banner Image',
+      type: 'imageBlock',
+    }),
   ],
   preview: {
     prepare() {
