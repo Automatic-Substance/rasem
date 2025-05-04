@@ -36,9 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const ogImage = resolveOpenGraphImage(settings?.ogImage);
   let metadataBase: URL | undefined = undefined;
   try {
-    metadataBase = settings?.ogImage?.metadataBase
-      ? new URL(settings.ogImage.metadataBase)
-      : undefined;
+    metadataBase = new URL("https://raseminvestments.com");
   } catch {
     // ignore
   }
@@ -49,9 +47,6 @@ export async function generateMetadata(): Promise<Metadata> {
       default: title,
     },
     description: description,
-    openGraph: {
-      images: ogImage ? [ogImage] : [],
-    },
   };
 }
 
